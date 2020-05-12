@@ -21,7 +21,5 @@ namespace Repository.Contract.Entities
         public virtual ICollection<DocumentEntity> DocumentsToReview { get; set; }
 
         public virtual ICollection<DocumentEntity> ApprovedDocuments { get; set; }
-
-        public virtual ICollection<DocumentEntity> BlockedDocuments { get; set; }
     }
 }

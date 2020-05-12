@@ -45,6 +45,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Core\Exceptions\DocManagerException.cs" />
+    <Compile Include="Documents\Models\Document.cs" />
+    <Compile Include="Documents\Models\DocumentVersion.cs" />
+    <Compile Include="Documents\Services\IDocumentService.cs" />
+    <Compile Include="Documents\Services\IDocumentVersionService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Users\Models\User.cs" />
     <Compile Include="Enumerations\Models\WorkingPosition.cs" />

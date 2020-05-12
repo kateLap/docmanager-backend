@@ -21,7 +21,5 @@ namespace Repository.Contract.Entities
 
         public virtual ICollection<UserEntity> UsersWithApprove { get; set; }
 
-        public virtual ICollection<UserEntity> UsersWithBlocking { get; set; }
-
     }
 }

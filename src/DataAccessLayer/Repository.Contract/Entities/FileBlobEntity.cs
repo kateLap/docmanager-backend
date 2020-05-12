@@ -7,9 +7,7 @@ namespace Repository.Contract.Entities
     {
         public Guid Id { get; set; }
 
-        public string Name { get; set; }
-
-        public int Length { get; set; }
+        public int Details { get; set; }
 
         public byte[] Content { get; set; }
 

@@ -6,6 +6,8 @@ namespace Repository.Contract.Entities
     {
         public int Id { get; set; }
 
+        public string Name { get; set; }
+
         public virtual FileBlobEntity FileBlob { get; set; }
 
         public virtual DocumentEntity Document { get; set; }

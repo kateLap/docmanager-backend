@@ -37,15 +37,6 @@ namespace Repository.Configurations
                 e.MapRightKey("User_Id");
                 e.ToTable("DocumentsUsersWithApprove");
             });
-
-            HasMany(e => e.UsersWithBlocking)
-                .WithMany(e => e.BlockedDocuments)
-                .Map(e =>
-                {
-                    e.MapLeftKey("Document_Id");
-                    e.MapRightKey("User_Id");
-                    e.ToTable("DocumentsUsersWithBlocking");
-                });
         }
     }
 }

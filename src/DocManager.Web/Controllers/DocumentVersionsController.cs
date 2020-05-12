@@ -3,15 +3,30 @@ using System.IO;
 using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
-using System.Text;
 using System.Web.Http;
+using System.Web.Http.Results;
+using DocManager.Business.Contract.Documents.Models;
+using DocManager.Business.Contract.Documents.Services;
+using DocManager.Business.Contract.Users.Models;
+using Microsoft.AspNet.Identity;
+using Ninject;
 
 namespace DocManager.Web.Controllers
 {
-    [Authorize]
-    [RoutePrefix("api/Versions")]
+    //[Authorize]
+    // [RoutePrefix("api/Versions")]
     public class DocumentVersionsController : ApiController
     {
+        #region Dependencies
+
+        [Inject]
+        public IDocumentVersionService DocumentVersionService { get; set; }
+
+        [Inject]
+        public UserManager<ProfileUser, Guid> UserManager { get; set; }
+
+        #endregion
+
         public class FileData
         {
             public string ContentType { get; set; }
@@ -21,6 +36,53 @@ namespace DocManager.Web.Controllers
         [HttpGet]
         [Route("")]
         public HttpResponseMessage Get()
+        {
+            return DownloadLocalFile();
+        }
+
+        [HttpPost]
+        [Route("")]
+        public HttpResponseMessage Post([FromBody]FileData file)
+        {
+            byte[] fileBytes = File.ReadAllBytes("C:\\1.pdf");
+
+            var result = new HttpResponseMessage(HttpStatusCode.OK)
+            {
+                Content = new StreamContent(new MemoryStream(fileBytes))
+            };
+
+            result.Content.Headers.ContentType = new MediaTypeHeaderValue("application/pdf");
+
+            result.Content.Headers.ContentDisposition = new ContentDispositionHeaderValue("attachment")
+            {
+                FileName = "1.pdf"
+            };
+
+            return result;
+        }
+
+        [HttpPost]
+        [Route("documents/{documentId:int}/versions")]
+        public IHttpActionResult Create([FromBody] DocumentVersion model)
+        {
+            return Ok();
+        }
+
+        [HttpGet]
+        [Route("documents/{documentId:int}/versions")]
+        public IHttpActionResult GetPolicyVersions(int documentId, int versionId)
+        {
+            return Ok();
+        }
+
+        [HttpGet]
+        [Route("documents/{documentId:int}/versions/{versionId:int}")]
+        public HttpResponseMessage DownloadPolicyVersion(int documentId, int versionId)
+        {
+            return DownloadLocalFile();
+        }
+
+        private HttpResponseMessage DownloadLocalFile()
         {
             byte[] fileBytes = File.ReadAllBytes("C:\\1.doc");
 
@@ -34,45 +96,6 @@ namespace DocManager.Web.Controllers
             result.Content.Headers.ContentDisposition = new ContentDispositionHeaderValue("attachment")
             {
                 FileName = "1.doc"
-            };
-
-            return result;
-        }
-
-        [HttpPost]
-        [Route("")]
-        public HttpResponseMessage Post([FromBody]FileData file)
-        {
-            /*byte[] fileBytes = File.ReadAllBytes("C:\\1.pdf");
-
-            var result = new HttpResponseMessage(HttpStatusCode.OK)
-            {
-                Content = new StreamContent(new MemoryStream(fileBytes))
-            };
-
-            result.Content.Headers.ContentType = new MediaTypeHeaderValue(file.ContentType);
-
-            result.Content.Headers.ContentDisposition = new ContentDispositionHeaderValue("attachment")
-            {
-                FileName = file.FileName
-            };
-
-
-            // result.Content = new ByteArrayContent(fileBytes);
-
-            return result;*/
-            byte[] fileBytes = File.ReadAllBytes("C:\\1.pdf");
-
-            var result = new HttpResponseMessage(HttpStatusCode.OK)
-            {
-                Content = new StreamContent(new MemoryStream(fileBytes))
-            };
-
-            result.Content.Headers.ContentType = new MediaTypeHeaderValue("application/pdf");
-
-            result.Content.Headers.ContentDisposition = new ContentDispositionHeaderValue("attachment")
-            {
-                FileName = "1.pdf"
             };
 
             return result;

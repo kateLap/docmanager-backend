@@ -192,6 +192,7 @@
     <Compile Include="Handlers\WebApiExceptionHandler.cs" />
     <Compile Include="Handlers\WebApiExceptionResult.cs" />
     <Compile Include="Mappers\RegisterModelMappingProfile.cs" />
+    <Compile Include="Models\DocumentModel.cs" />
     <Compile Include="Models\LoginModel.cs" />
     <Compile Include="Models\ProfileModel.cs" />
     <Compile Include="Models\RegisterModel.cs" />

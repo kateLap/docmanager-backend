@@ -8,9 +8,8 @@ namespace Repository.Configurations
     {
         public FileBlobsTableConfiguration() : base("FileBlobs")
         {
-            Property(e => e.Name).IsRequired();
             Property(e => e.Content).IsRequired();
-            Property(e => e.Length).IsOptional();
+            Property(e => e.Details).IsOptional();
         }
     }
 }

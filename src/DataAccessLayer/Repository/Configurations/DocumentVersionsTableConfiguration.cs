@@ -7,6 +7,7 @@ namespace Repository.Configurations
     {
         public DocumentVersionsTableConfiguration() : base("DocumentVersions")
         {
+            Property(e => e.Name).IsRequired();
             HasRequired(e => e.Document).WithMany(e => e.DocumentVersions);
             HasRequired(e => e.FileBlob).WithRequiredDependent(e => e.DocumentVersion);
         }
