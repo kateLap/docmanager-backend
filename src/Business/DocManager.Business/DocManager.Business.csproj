@@ -58,6 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Core\Extensions\AutoMapperProfileExtensions.cs" />
+    <Compile Include="Documents\Services\DocumentVersionService.cs" />
     <Compile Include="Documents\Services\DocumentService.cs" />
     <Compile Include="Documents\Mappings\DocumentsMappingProfiles.cs" />
     <Compile Include="Enumerations\Mappings\StatusMappingProfile.cs" />

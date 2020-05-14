@@ -45,7 +45,7 @@ namespace DocManager.Business.Documents.Services
             }
             catch (Exception e)
             {
-                throw new DocManagerException("Error during document creation", e.Message, e);
+                throw new DocManagerException("Error during document creation.", e.Message, e);
             }
         }
 

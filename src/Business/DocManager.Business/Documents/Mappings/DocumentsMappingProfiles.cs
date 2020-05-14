@@ -19,8 +19,8 @@ namespace DocManager.Business.Documents.Mappings
             this.CreateMapFromId<int, DocumentEntity>();
 
             CreateMap<FileBlob, FileBlobEntity>()
-                .ForMember(dest => dest.Id, opt => opt.MapFrom(e => Guid.NewGuid()))
                 .ForMember(dest => dest.DocumentVersion, opt => opt.Ignore());
-}
+            CreateMap<FileBlobEntity, FileBlob>();
+        }
     }
 }

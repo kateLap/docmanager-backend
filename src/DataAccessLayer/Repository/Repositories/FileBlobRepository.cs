@@ -6,7 +6,7 @@ using Repository.Repositories.Base;
 
 namespace Repository.Repositories
 {
-    public class FileBlobRepository : EntityRepository<FileBlobEntity, Guid>, IFileBlobRepository
+    public class FileBlobRepository : EntityRepository<FileBlobEntity, int>, IFileBlobRepository
     {
         public FileBlobRepository(DocManagerDbContext context) : base(context)
         {

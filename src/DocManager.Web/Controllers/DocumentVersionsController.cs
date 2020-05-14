@@ -3,9 +3,12 @@ using System.IO;
 using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
+using System.Threading.Tasks;
+using System.Web;
 using System.Web.Http;
+using DocManager.Business.Contract.Documents.Models;
+using DocManager.Business.Contract.Documents.Services;
 using DocManager.Business.Contract.Users.Models;
-using DocManager.Web.Models;
 using Microsoft.AspNet.Identity;
 using Ninject;
 
@@ -17,8 +20,8 @@ namespace DocManager.Web.Controllers
     {
         #region Dependencies
 
-        //[Inject]
-        //public IDocumentVersionService DocumentVersionService { get; set; }
+        [Inject]
+        public IDocumentVersionService DocumentVersionService { get; set; }
 
         [Inject]
         public UserManager<ProfileUser, Guid> UserManager { get; set; }
@@ -61,8 +64,35 @@ namespace DocManager.Web.Controllers
 
         [HttpPost]
         [Route("documents/{documentId:int}/versions")]
-        public IHttpActionResult Create()
+        public async Task<IHttpActionResult> Create(int documentId)
         {
+            if (HttpContext.Current.Request.Files.Count == 0)
+            {
+                throw new HttpResponseException(HttpStatusCode.UnsupportedMediaType);
+            }
+
+            HttpPostedFile postedFile = HttpContext.Current.Request.Files[0];
+
+            byte[] bytes;
+            using (BinaryReader br = new BinaryReader(postedFile.InputStream))
+            {
+                bytes = br.ReadBytes(postedFile.ContentLength);
+            }
+            
+            var fileBlob = new FileBlob()
+            {
+                Content = bytes,
+                Details = postedFile.ContentType
+            };
+
+            var documentVersion = new DocumentVersion()
+            {
+                Document = new Document() { Id = documentId },
+                Name = postedFile.FileName,
+            };
+
+            await DocumentVersionService.CreateDocumentVersion(documentVersion, fileBlob);
+
             return Ok();
         }
 

@@ -23,6 +23,7 @@ namespace DependencyResolver
             kernel.Bind<IUserPasswordStore<ProfileUser, Guid>, IUserStore<ProfileUser, Guid>>().To<UserService>().InRequestScope();
             kernel.Bind<IUserRetrievingService>().To<UserService>().InRequestScope();
             kernel.Bind<IDocumentService>().To<DocumentService>().InRequestScope();
+            kernel.Bind<IDocumentVersionService>().To<DocumentVersionService>().InRequestScope();
 
             kernel.Bind<IUserRepository>().To<UserRepository>().InRequestScope();
             kernel.Bind<IStatusRepository>().To<StatusRepository>().InRequestScope();

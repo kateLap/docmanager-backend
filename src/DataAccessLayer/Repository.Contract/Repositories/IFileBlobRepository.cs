@@ -4,7 +4,7 @@ using Repository.Contract.Repositories.Base;
 
 namespace Repository.Contract.Repositories
 {
-    public interface IFileBlobRepository : IEntityRepository<FileBlobEntity, Guid>
+    public interface IFileBlobRepository : IEntityRepository<FileBlobEntity, int>
     {
     }
 }

@@ -91,6 +91,42 @@
     <Compile Include="Migrations\202005121116244_MoveFileNameFromBlobToDocVersion.designer.cs">
       <DependentUpon>202005121116244_MoveFileNameFromBlobToDocVersion.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202005141312490_ModifyFileBlobDetailsTypeToStringFromInt.cs" />
+    <Compile Include="Migrations\202005141312490_ModifyFileBlobDetailsTypeToStringFromInt.designer.cs">
+      <DependentUpon>202005141312490_ModifyFileBlobDetailsTypeToStringFromInt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202005141540127_OptionalFileBlobContent.cs" />
+    <Compile Include="Migrations\202005141540127_OptionalFileBlobContent.designer.cs">
+      <DependentUpon>202005141540127_OptionalFileBlobContent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202005141613570_OneToOneOptionalDependencyOfFileBlobOnDocVersion.cs" />
+    <Compile Include="Migrations\202005141613570_OneToOneOptionalDependencyOfFileBlobOnDocVersion.designer.cs">
+      <DependentUpon>202005141613570_OneToOneOptionalDependencyOfFileBlobOnDocVersion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202005141623439_OneToOneOptionalDependency2.cs" />
+    <Compile Include="Migrations\202005141623439_OneToOneOptionalDependency2.designer.cs">
+      <DependentUpon>202005141623439_OneToOneOptionalDependency2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202005141912072_RemoveFileBlobsTable.cs" />
+    <Compile Include="Migrations\202005141912072_RemoveFileBlobsTable.designer.cs">
+      <DependentUpon>202005141912072_RemoveFileBlobsTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202005141915407_AddFileBlobsTable.cs" />
+    <Compile Include="Migrations\202005141915407_AddFileBlobsTable.designer.cs">
+      <DependentUpon>202005141915407_AddFileBlobsTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202005141935428_OptionalVersionName.cs" />
+    <Compile Include="Migrations\202005141935428_OptionalVersionName.designer.cs">
+      <DependentUpon>202005141935428_OptionalVersionName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202005142046057_VersionsTableWithoutKey.cs" />
+    <Compile Include="Migrations\202005142046057_VersionsTableWithoutKey.designer.cs">
+      <DependentUpon>202005142046057_VersionsTableWithoutKey.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202005142102581_OneFileBlobToManyVersions.cs" />
+    <Compile Include="Migrations\202005142102581_OneFileBlobToManyVersions.designer.cs">
+      <DependentUpon>202005142102581_OneFileBlobToManyVersions.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\Base\AbstractRepository.cs" />
@@ -127,6 +163,33 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202005121116244_MoveFileNameFromBlobToDocVersion.resx">
       <DependentUpon>202005121116244_MoveFileNameFromBlobToDocVersion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005141312490_ModifyFileBlobDetailsTypeToStringFromInt.resx">
+      <DependentUpon>202005141312490_ModifyFileBlobDetailsTypeToStringFromInt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005141540127_OptionalFileBlobContent.resx">
+      <DependentUpon>202005141540127_OptionalFileBlobContent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005141613570_OneToOneOptionalDependencyOfFileBlobOnDocVersion.resx">
+      <DependentUpon>202005141613570_OneToOneOptionalDependencyOfFileBlobOnDocVersion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005141623439_OneToOneOptionalDependency2.resx">
+      <DependentUpon>202005141623439_OneToOneOptionalDependency2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005141912072_RemoveFileBlobsTable.resx">
+      <DependentUpon>202005141912072_RemoveFileBlobsTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005141915407_AddFileBlobsTable.resx">
+      <DependentUpon>202005141915407_AddFileBlobsTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005141935428_OptionalVersionName.resx">
+      <DependentUpon>202005141935428_OptionalVersionName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005142046057_VersionsTableWithoutKey.resx">
+      <DependentUpon>202005142046057_VersionsTableWithoutKey.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005142102581_OneFileBlobToManyVersions.resx">
+      <DependentUpon>202005142102581_OneFileBlobToManyVersions.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

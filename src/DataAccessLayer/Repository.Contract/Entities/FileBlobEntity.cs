@@ -1,16 +1,16 @@
-﻿using System;
+﻿using System.Collections.Generic;
 using Repository.Contract.Entities.Contract;
 
 namespace Repository.Contract.Entities
 {
-    public class FileBlobEntity: IEntity<Guid>
+    public class FileBlobEntity : IEntity<int>
     {
-        public Guid Id { get; set; }
+        public int Id { get; set; }
 
-        public int Details { get; set; }
+        public string Details { get; set; }
 
         public byte[] Content { get; set; }
 
-        public virtual DocumentVersionEntity DocumentVersion { get; set; }
+        public virtual ICollection<DocumentVersionEntity> DocumentVersion { get; set; }
     }
 }
