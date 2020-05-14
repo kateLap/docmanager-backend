@@ -16,6 +16,6 @@ namespace DocManager.Business.Contract.Users.Models
 
         public string Password { get; set; }
 
-        public virtual WorkingPosition WorkingPosition { get; set; }
+        public WorkingPosition WorkingPosition { get; set; }
     }
 }

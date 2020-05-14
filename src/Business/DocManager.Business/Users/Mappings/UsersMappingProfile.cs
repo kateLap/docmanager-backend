@@ -8,10 +8,15 @@ namespace DocManager.Business.Users.Mappings
 {
     public sealed class UsersMappingProfile : Profile
     {
+
         public UsersMappingProfile()
         {
             CreateMap<UserEntity, ProfileUser>();
             this.CreateMapFromId<Guid, UserEntity>();
+
+            CreateMap<ProfileUser, UserEntity>()
+                .ForMember(dest => dest.ApprovedDocuments, opt => opt.Ignore())
+                .ForMember(dest => dest.DocumentsToReview, opt => opt.Ignore());
         }
     }
 }

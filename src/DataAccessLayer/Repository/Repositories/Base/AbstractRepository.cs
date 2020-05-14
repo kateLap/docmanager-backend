@@ -14,7 +14,7 @@ namespace Repository.Repositories.Base
 
         public virtual IQueryable<TEntity> Get(Expression<Func<TEntity, bool>> filter)
         {
-            return GetAll().Where(filter);
+            return GetAll().Where(filter).AsNoTracking();
         }
 
         public abstract TEntity Add(TEntity entity);

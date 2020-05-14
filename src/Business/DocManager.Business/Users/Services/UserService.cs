@@ -30,7 +30,7 @@ namespace DocManager.Business.Users.Services
         public async Task<ProfileUser> GetByUserName(string userName)
         {
             UserEntity user = await _userRepository.GetByUserNameAsync(userName);
-
+            
             return Mapper.Map<ProfileUser>(user);
         }
 

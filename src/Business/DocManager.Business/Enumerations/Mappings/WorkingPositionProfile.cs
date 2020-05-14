@@ -14,9 +14,8 @@ namespace DocManager.Business.Enumerations.Mappings
             this.CreateMapFromId<int, WorkingPositionEntity>();
 
             CreateMap<WorkingPosition, WorkingPositionEntity>()
-                .ForMember(dest => dest.Id, opt => opt.MapFrom(e => e.Id))
-                .ForMember(dest => dest.Name, opt => opt.MapFrom(e => e.Name))
-                .ForAllOtherMembers(opt => opt.Ignore());
+                .ForMember(dest => dest.DocumentsToModify, opt => opt.Ignore())
+                .ForMember(dest => dest.Users, opt => opt.Ignore());
         }
     }
 }
