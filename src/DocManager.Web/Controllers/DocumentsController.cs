@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Web.Http;
 using AutoMapper;
+using DocManager.Business.Contract.Core.Exceptions;
 using DocManager.Business.Contract.Documents.Models;
 using DocManager.Business.Contract.Documents.Services;
 using DocManager.Business.Contract.Users.Models;
@@ -13,7 +14,7 @@ using Ninject;
 
 namespace DocManager.Web.Controllers
 {
-    // [Authorize]
+    [Authorize]
     [RoutePrefix("api/Documents")]
     public class DocumentsController : ApiController
     {
@@ -61,6 +62,11 @@ namespace DocManager.Web.Controllers
         [Route("{documentId:int}/approve")]
         public IHttpActionResult Approve(int documentId)
         {
+            if (documentId <= 0)
+            {
+                throw new DocManagerException("Document Is should be greater than zero.");
+            }
+
             DocumentService.Approve(User.Identity.Name, documentId);
             return Ok();
         }

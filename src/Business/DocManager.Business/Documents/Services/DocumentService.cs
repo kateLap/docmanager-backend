@@ -16,12 +16,17 @@ namespace DocManager.Business.Documents.Services
     public class DocumentService : IDocumentService
     {
         private readonly IDocumentRepository _documentRepository;
+        private readonly IDocumentVersionRepository _documentVersionRepository;
         private readonly IStatusRepository _statusRepository;
 
-        public DocumentService(IDocumentRepository documentRepository, IStatusRepository statusRepository)
+        public DocumentService(
+            IDocumentRepository documentRepository,
+            IDocumentVersionRepository documentVersionRepository,
+            IStatusRepository statusRepository)
         {
             _documentRepository = documentRepository;
             _statusRepository = statusRepository;
+            _documentVersionRepository = documentVersionRepository;
         }
 
         public async Task CreateDocument(Document document)
@@ -75,12 +80,83 @@ namespace DocManager.Business.Documents.Services
 
         public void Approve(string selfUserName, int documentId)
         {
-            throw new NotImplementedException();
+            DocumentEntity documentEntity = _documentRepository
+                .Get(e => e.Id == documentId)
+                .FirstOrDefault(e => e.Reviewers.Any(u => u.UserName == selfUserName));
+
+            if (documentEntity == null)
+            {
+                throw new DocManagerException("Requested document does not exist or not accessible.");
+            }
+
+            DocumentEntity document = _documentRepository
+                .Get(e => e.Id == documentId)
+                .FirstOrDefault();
+
+            if (document?.Status.Name != "Need review")
+            {
+                throw new DocManagerException("You cannot modify document in approved status.");
+            }
+
+            document.UsersWithApprove.Add(new UserEntity()
+            {
+                UserName = selfUserName
+            });
+
+            StatusEntity statusEntity = _statusRepository
+                .GetAll()
+                .AsNoTracking()
+                .FirstOrDefault(s => s.Name == "Approved");
+
+            if (document.Reviewers == document.UsersWithApprove)
+            {
+                document.Status = statusEntity;
+            }
+
+            _documentRepository.Update(document);
+
+            _documentRepository.CommitAsync();
         }
 
         public void Decline(string selfUserName, int documentId)
         {
-            throw new NotImplementedException();
+            DocumentEntity documentEntity = _documentRepository
+                .Get(e => e.Id == documentId)
+                .FirstOrDefault(e => e.Reviewers.Any(u => u.UserName == selfUserName));
+
+            if (documentEntity == null)
+            {
+                throw new DocManagerException("Requested document does not exist or not accessible.");
+            }
+
+            DocumentEntity document = _documentRepository
+                .Get(e => e.Id == documentId)
+                .FirstOrDefault();
+
+            if (document?.Status.Name != "Need review")
+            {
+                throw new DocManagerException("You cannot modify document in approved status.");
+            }
+
+            StatusEntity statusEntity = _statusRepository
+                .GetAll()
+                .AsNoTracking()
+                .FirstOrDefault(s => s.Name == "Approved");
+
+            document.Status = statusEntity;
+
+            DocumentVersionEntity last = document.DocumentVersions.Last();
+
+            document.DocumentVersions = document.DocumentVersions
+                .Except(new []
+                {
+                    last
+                })
+                .ToList();
+
+            _documentVersionRepository.Delete(last);
+
+            _documentRepository.CommitAsync();
         }
     }
 }

@@ -48,11 +48,24 @@ namespace DocManager.Web.Controllers
 
             List<ProfileModel> profiles = users.Select(Mapper.Map<ProfileModel>).ToList();
 
-            ProfileModel isSelfProfile = profiles.First(p => p.UserName == User.Identity.Name);
-            isSelfProfile.IsSelf = true;
+            ProfileModel selfProfile = profiles.First(p => p.UserName == User.Identity.Name);
+            selfProfile.IsSelf = true;
 
             return Ok(profiles);
         }
+
+        //[HttpGet]
+        //[Route("/self")]
+        //public async Task<IHttpActionResult> GetSelfProfile()
+        //{
+        //    ProfileUser user = await UserRetrievingService.GetByUserName(User.Identity.Name);
+
+        //    ProfileModel selfProfileModel = Mapper.Map<ProfileUser, ProfileModel>(user);
+
+        //    selfProfileModel.IsSelf = true;
+
+        //    return Ok(selfProfileModel);
+        //}
 
         [HttpPut]
         [Route("Edit")]

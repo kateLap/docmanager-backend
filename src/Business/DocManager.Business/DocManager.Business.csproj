@@ -63,6 +63,7 @@
     <Compile Include="Documents\Mappings\DocumentsMappingProfiles.cs" />
     <Compile Include="Enumerations\Mappings\StatusMappingProfile.cs" />
     <Compile Include="Enumerations\Mappings\WorkingPositionProfile.cs" />
+    <Compile Include="Enumerations\Services\WorkingPositionService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Users\Mappings\UsersMappingProfile.cs" />
     <Compile Include="Users\Services\UserManager.cs" />
@@ -70,6 +71,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="ClassDiagram.cd" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
@@ -82,8 +84,6 @@
       <Name>DocManager.Business.Contract</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Enumerations\Services\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

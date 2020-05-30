@@ -1,8 +1,10 @@
 ﻿using System;
 using DocManager.Business.Contract.Documents.Services;
+using DocManager.Business.Contract.Enumerations.Services;
 using DocManager.Business.Contract.Users.Models;
 using DocManager.Business.Contract.Users.Services;
 using DocManager.Business.Documents.Services;
+using DocManager.Business.Enumerations.Services;
 using DocManager.Business.Users.Services;
 using Microsoft.AspNet.Identity;
 using Ninject;
@@ -24,6 +26,7 @@ namespace DependencyResolver
             kernel.Bind<IUserRetrievingService>().To<UserService>().InRequestScope();
             kernel.Bind<IDocumentService>().To<DocumentService>().InRequestScope();
             kernel.Bind<IDocumentVersionService>().To<DocumentVersionService>().InRequestScope();
+            kernel.Bind<IWorkingPositionService>().To<WorkingPositionService>().InRequestScope();
 
             kernel.Bind<IUserRepository>().To<UserRepository>().InRequestScope();
             kernel.Bind<IStatusRepository>().To<StatusRepository>().InRequestScope();

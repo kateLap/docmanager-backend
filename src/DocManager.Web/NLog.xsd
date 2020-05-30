@@ -12,42 +12,42 @@
     </xs:choice>
     <xs:attribute name="autoReload" type="xs:boolean">
       <xs:annotation>
-        <xs:documentation>Watch config file for changes and reload automatically.</xs:documentation>
+        <xs:documentVersionation>Watch config file for changes and reload automatically.</xs:documentVersionation>
       </xs:annotation>
     </xs:attribute>
     <xs:attribute name="internalLogToConsole" type="xs:boolean">
       <xs:annotation>
-        <xs:documentation>Print internal NLog messages to the console. Default value is: false</xs:documentation>
+        <xs:documentVersionation>Print internal NLog messages to the console. Default value is: false</xs:documentVersionation>
       </xs:annotation>
     </xs:attribute>
     <xs:attribute name="internalLogToConsoleError" type="xs:boolean">
       <xs:annotation>
-        <xs:documentation>Print internal NLog messages to the console error output. Default value is: false</xs:documentation>
+        <xs:documentVersionation>Print internal NLog messages to the console error output. Default value is: false</xs:documentVersionation>
       </xs:annotation>
     </xs:attribute>
     <xs:attribute name="internalLogFile" type="xs:string">
       <xs:annotation>
-        <xs:documentation>Write internal NLog messages to the specified file.</xs:documentation>
+        <xs:documentVersionation>Write internal NLog messages to the specified file.</xs:documentVersionation>
       </xs:annotation>
     </xs:attribute>
     <xs:attribute name="internalLogLevel" type="NLogLevel">
       <xs:annotation>
-        <xs:documentation>Log level threshold for internal log messages. Default value is: Info.</xs:documentation>
+        <xs:documentVersionation>Log level threshold for internal log messages. Default value is: Info.</xs:documentVersionation>
       </xs:annotation>
     </xs:attribute>
     <xs:attribute name="globalThreshold" type="NLogLevel">
       <xs:annotation>
-        <xs:documentation>Global log level threshold for application log messages. Messages below this level won't be logged..</xs:documentation>
+        <xs:documentVersionation>Global log level threshold for application log messages. Messages below this level won't be logged..</xs:documentVersionation>
       </xs:annotation>
     </xs:attribute>
     <xs:attribute name="throwExceptions" type="xs:boolean">
       <xs:annotation>
-        <xs:documentation>Pass NLog internal exceptions to the application. Default value is: false.</xs:documentation>
+        <xs:documentVersionation>Pass NLog internal exceptions to the application. Default value is: false.</xs:documentVersionation>
       </xs:annotation>
     </xs:attribute>
     <xs:attribute name="internalLogToTrace" type="xs:boolean">
       <xs:annotation>
-        <xs:documentation>Write internal NLog messages to the the System.Diagnostics.Trace. Default value is: false</xs:documentation>
+        <xs:documentVersionation>Write internal NLog messages to the the System.Diagnostics.Trace. Default value is: false</xs:documentVersionation>
       </xs:annotation>
     </xs:attribute>
   </xs:complexType>
@@ -61,7 +61,7 @@
     </xs:choice>
     <xs:attribute name="async" type="xs:boolean">
       <xs:annotation>
-        <xs:documentation>Make all targets within this section asynchronous (creates additional threads but the calling thread isn't blocked by any target writes).</xs:documentation>
+        <xs:documentVersionation>Make all targets within this section asynchronous (creates additional threads but the calling thread isn't blocked by any target writes).</xs:documentVersionation>
       </xs:annotation>
     </xs:attribute>
   </xs:complexType>
@@ -78,17 +78,17 @@
   <xs:complexType name="NLogExtensionsAdd">
     <xs:attribute name="prefix" type="xs:string">
       <xs:annotation>
-        <xs:documentation>Prefix for targets/layout renderers/filters/conditions loaded from this assembly.</xs:documentation>
+        <xs:documentVersionation>Prefix for targets/layout renderers/filters/conditions loaded from this assembly.</xs:documentVersionation>
       </xs:annotation>
     </xs:attribute>
     <xs:attribute name="assemblyFile" type="xs:string">
       <xs:annotation>
-        <xs:documentation>Load NLog extensions from the specified file (*.dll)</xs:documentation>
+        <xs:documentVersionation>Load NLog extensions from the specified file (*.dll)</xs:documentVersionation>
       </xs:annotation>
     </xs:attribute>
     <xs:attribute name="assembly" type="xs:string">
       <xs:annotation>
-        <xs:documentation>Load NLog extensions from the specified assembly. Assembly name should be fully qualified.</xs:documentation>
+        <xs:documentVersionation>Load NLog extensions from the specified assembly. Assembly name should be fully qualified.</xs:documentVersionation>
       </xs:annotation>
     </xs:attribute>
   </xs:complexType>
@@ -98,42 +98,42 @@
     </xs:choice>
     <xs:attribute name="name" use="optional">
       <xs:annotation>
-        <xs:documentation>Name of the logger. May include '*' character which acts like a wildcard. Allowed forms are: *, Name, *Name, Name* and *Name*</xs:documentation>
+        <xs:documentVersionation>Name of the logger. May include '*' character which acts like a wildcard. Allowed forms are: *, Name, *Name, Name* and *Name*</xs:documentVersionation>
       </xs:annotation>
     </xs:attribute>
     <xs:attribute name="levels" type="NLogLevelList">
       <xs:annotation>
-        <xs:documentation>Comma separated list of levels that this rule matches.</xs:documentation>
+        <xs:documentVersionation>Comma separated list of levels that this rule matches.</xs:documentVersionation>
       </xs:annotation>
     </xs:attribute>
     <xs:attribute name="minlevel" type="NLogLevel">
       <xs:annotation>
-        <xs:documentation>Minimum level that this rule matches.</xs:documentation>
+        <xs:documentVersionation>Minimum level that this rule matches.</xs:documentVersionation>
       </xs:annotation>
     </xs:attribute>
     <xs:attribute name="maxlevel" type="NLogLevel">
       <xs:annotation>
-        <xs:documentation>Maximum level that this rule matches.</xs:documentation>
+        <xs:documentVersionation>Maximum level that this rule matches.</xs:documentVersionation>
       </xs:annotation>
     </xs:attribute>
     <xs:attribute name="level" type="NLogLevel">
       <xs:annotation>
-        <xs:documentation>Level that this rule matches.</xs:documentation>
+        <xs:documentVersionation>Level that this rule matches.</xs:documentVersionation>
       </xs:annotation>
     </xs:attribute>
     <xs:attribute name="writeTo" type="NLogTargetIDList">
       <xs:annotation>
-        <xs:documentation>Comma separated list of target names.</xs:documentation>
+        <xs:documentVersionation>Comma separated list of target names.</xs:documentVersionation>
       </xs:annotation>
     </xs:attribute>
     <xs:attribute name="final" type="xs:boolean" default="false">
       <xs:annotation>
-        <xs:documentation>Ignore further rules if this one matches.</xs:documentation>
+        <xs:documentVersionation>Ignore further rules if this one matches.</xs:documentVersionation>
       </xs:annotation>
     </xs:attribute>
     <xs:attribute name="enabled" type="xs:boolean" default="true">
       <xs:annotation>
-        <xs:documentation>Enable or disable logging rule. Disabled rules are ignored.</xs:documentation>
+        <xs:documentVersionation>Enable or disable logging rule. Disabled rules are ignored.</xs:documentVersionation>
       </xs:annotation>
     </xs:attribute>
   </xs:complexType>
@@ -174,24 +174,24 @@
   <xs:complexType name="NLogInclude">
     <xs:attribute name="file" type="SimpleLayoutAttribute" use="required">
       <xs:annotation>
-        <xs:documentation>Name of the file to be included. The name is relative to the name of the current config file.</xs:documentation>
+        <xs:documentVersionation>Name of the file to be included. The name is relative to the name of the current config file.</xs:documentVersionation>
       </xs:annotation>
     </xs:attribute>
     <xs:attribute name="ignoreErrors" type="xs:boolean" use="optional" default="false">
       <xs:annotation>
-        <xs:documentation>Ignore any errors in the include file.</xs:documentation>
+        <xs:documentVersionation>Ignore any errors in the include file.</xs:documentVersionation>
       </xs:annotation>
     </xs:attribute>
   </xs:complexType>
   <xs:complexType name="NLogVariable">
     <xs:attribute name="name" type="xs:string" use="required">
       <xs:annotation>
-        <xs:documentation>Variable name.</xs:documentation>
+        <xs:documentVersionation>Variable name.</xs:documentVersionation>
       </xs:annotation>
     </xs:attribute>
     <xs:attribute name="value" type="SimpleLayoutAttribute" use="required">
       <xs:annotation>
-        <xs:documentation>Variable value.</xs:documentation>
+        <xs:documentVersionation>Variable value.</xs:documentVersionation>
       </xs:annotation>
     </xs:attribute>
   </xs:complexType>
@@ -258,37 +258,37 @@
         </xs:choice>
         <xs:attribute name="name" type="xs:string">
           <xs:annotation>
-            <xs:documentation>Name of the target.</xs:documentation>
+            <xs:documentVersionation>Name of the target.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="batchSize" type="xs:integer">
           <xs:annotation>
-            <xs:documentation>Number of log events that should be processed in a batch by the lazy writer thread.</xs:documentation>
+            <xs:documentVersionation>Number of log events that should be processed in a batch by the lazy writer thread.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="fullBatchSizeWriteLimit" type="xs:integer">
           <xs:annotation>
-            <xs:documentation>Limit of full s to write before yielding into  Performance is better when writing many small batches, than writing a single large batch</xs:documentation>
+            <xs:documentVersionation>Limit of full s to write before yielding into  Performance is better when writing many small batches, than writing a single large batch</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="overflowAction" type="NLog.Targets.Wrappers.AsyncTargetWrapperOverflowAction">
           <xs:annotation>
-            <xs:documentation>Action to be taken when the lazy writer thread request queue count exceeds the set limit.</xs:documentation>
+            <xs:documentVersionation>Action to be taken when the lazy writer thread request queue count exceeds the set limit.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="queueLimit" type="xs:integer">
           <xs:annotation>
-            <xs:documentation>Limit on the number of requests in the lazy writer thread request queue.</xs:documentation>
+            <xs:documentVersionation>Limit on the number of requests in the lazy writer thread request queue.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="timeToSleepBetweenBatches" type="xs:integer">
           <xs:annotation>
-            <xs:documentation>Time in milliseconds to sleep between batches.</xs:documentation>
+            <xs:documentVersionation>Time in milliseconds to sleep between batches.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="optimizeBufferReuse" type="xs:boolean">
           <xs:annotation>
-            <xs:documentation>Target supports reuse of internal buffers, and doesn't have to constantly allocate new buffers Required for legacy NLog-targets, that expects buffers to remain stable after Write-method exit</xs:documentation>
+            <xs:documentVersionation>Target supports reuse of internal buffers, and doesn't have to constantly allocate new buffers Required for legacy NLog-targets, that expects buffers to remain stable after Write-method exit</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
       </xs:extension>
@@ -311,17 +311,17 @@
         </xs:choice>
         <xs:attribute name="name" type="xs:string">
           <xs:annotation>
-            <xs:documentation>Name of the target.</xs:documentation>
+            <xs:documentVersionation>Name of the target.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="condition" type="Condition">
           <xs:annotation>
-            <xs:documentation>Condition expression. Log events who meet this condition will cause a flush on the wrapped target.</xs:documentation>
+            <xs:documentVersionation>Condition expression. Log events who meet this condition will cause a flush on the wrapped target.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="optimizeBufferReuse" type="xs:boolean">
           <xs:annotation>
-            <xs:documentation>Target supports reuse of internal buffers, and doesn't have to constantly allocate new buffers Required for legacy NLog-targets, that expects buffers to remain stable after Write-method exit</xs:documentation>
+            <xs:documentVersionation>Target supports reuse of internal buffers, and doesn't have to constantly allocate new buffers Required for legacy NLog-targets, that expects buffers to remain stable after Write-method exit</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
       </xs:extension>
@@ -339,27 +339,27 @@
         </xs:choice>
         <xs:attribute name="name" type="xs:string">
           <xs:annotation>
-            <xs:documentation>Name of the target.</xs:documentation>
+            <xs:documentVersionation>Name of the target.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="bufferSize" type="xs:integer">
           <xs:annotation>
-            <xs:documentation>Number of log events to be buffered.</xs:documentation>
+            <xs:documentVersionation>Number of log events to be buffered.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="flushTimeout" type="xs:integer">
           <xs:annotation>
-            <xs:documentation>Timeout (in milliseconds) after which the contents of buffer will be flushed if there's no write in the specified period of time. Use -1 to disable timed flushes.</xs:documentation>
+            <xs:documentVersionation>Timeout (in milliseconds) after which the contents of buffer will be flushed if there's no write in the specified period of time. Use -1 to disable timed flushes.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="slidingTimeout" type="xs:boolean">
           <xs:annotation>
-            <xs:documentation>Indicates whether to use sliding timeout.</xs:documentation>
+            <xs:documentVersionation>Indicates whether to use sliding timeout.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="optimizeBufferReuse" type="xs:boolean">
           <xs:annotation>
-            <xs:documentation>Target supports reuse of internal buffers, and doesn't have to constantly allocate new buffers Required for legacy NLog-targets, that expects buffers to remain stable after Write-method exit</xs:documentation>
+            <xs:documentVersionation>Target supports reuse of internal buffers, and doesn't have to constantly allocate new buffers Required for legacy NLog-targets, that expects buffers to remain stable after Write-method exit</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
       </xs:extension>
@@ -394,107 +394,107 @@
         </xs:choice>
         <xs:attribute name="name" type="xs:string">
           <xs:annotation>
-            <xs:documentation>Name of the target.</xs:documentation>
+            <xs:documentVersionation>Name of the target.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="encoding" type="xs:string">
           <xs:annotation>
-            <xs:documentation>Encoding to be used.</xs:documentation>
+            <xs:documentVersionation>Encoding to be used.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="layout" type="SimpleLayoutAttribute">
           <xs:annotation>
-            <xs:documentation>Instance of  that is used to format log messages.</xs:documentation>
+            <xs:documentVersionation>Instance of  that is used to format log messages.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="lineEnding" type="LineEndingMode">
           <xs:annotation>
-            <xs:documentation>End of line value if a newline is appended at the end of log message .</xs:documentation>
+            <xs:documentVersionation>End of line value if a newline is appended at the end of log message .</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="maxMessageSize" type="xs:integer">
           <xs:annotation>
-            <xs:documentation>Maximum message size in bytes.</xs:documentation>
+            <xs:documentVersionation>Maximum message size in bytes.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="newLine" type="xs:boolean">
           <xs:annotation>
-            <xs:documentation>Indicates whether to append newline at the end of log message.</xs:documentation>
+            <xs:documentVersionation>Indicates whether to append newline at the end of log message.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="onConnectionOverflow" type="NLog.Targets.NetworkTargetConnectionsOverflowAction">
           <xs:annotation>
-            <xs:documentation>Action that should be taken if the will be more connections than .</xs:documentation>
+            <xs:documentVersionation>Action that should be taken if the will be more connections than .</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="onOverflow" type="NLog.Targets.NetworkTargetOverflowAction">
           <xs:annotation>
-            <xs:documentation>Action that should be taken if the message is larger than maxMessageSize.</xs:documentation>
+            <xs:documentVersionation>Action that should be taken if the message is larger than maxMessageSize.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="maxConnections" type="xs:integer">
           <xs:annotation>
-            <xs:documentation>Maximum current connections. 0 = no maximum.</xs:documentation>
+            <xs:documentVersionation>Maximum current connections. 0 = no maximum.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="keepConnection" type="xs:boolean">
           <xs:annotation>
-            <xs:documentation>Indicates whether to keep connection open whenever possible.</xs:documentation>
+            <xs:documentVersionation>Indicates whether to keep connection open whenever possible.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="connectionCacheSize" type="xs:integer">
           <xs:annotation>
-            <xs:documentation>Size of the connection cache (number of connections which are kept alive).</xs:documentation>
+            <xs:documentVersionation>Size of the connection cache (number of connections which are kept alive).</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="address" type="SimpleLayoutAttribute">
           <xs:annotation>
-            <xs:documentation>Network address.</xs:documentation>
+            <xs:documentVersionation>Network address.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="maxQueueSize" type="xs:integer">
           <xs:annotation>
-            <xs:documentation>Maximum queue size.</xs:documentation>
+            <xs:documentVersionation>Maximum queue size.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="includeMdc" type="xs:boolean">
           <xs:annotation>
-            <xs:documentation>Indicates whether to include  dictionary contents.</xs:documentation>
+            <xs:documentVersionation>Indicates whether to include  dictionary contents.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="includeSourceInfo" type="xs:boolean">
           <xs:annotation>
-            <xs:documentation>Indicates whether to include source info (file name and line number) in the information sent over the network.</xs:documentation>
+            <xs:documentVersionation>Indicates whether to include source info (file name and line number) in the information sent over the network.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="includeNLogData" type="xs:boolean">
           <xs:annotation>
-            <xs:documentation>Indicates whether to include NLog-specific extensions to log4j schema.</xs:documentation>
+            <xs:documentVersionation>Indicates whether to include NLog-specific extensions to log4j schema.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="includeNdc" type="xs:boolean">
           <xs:annotation>
-            <xs:documentation>Indicates whether to include  stack contents.</xs:documentation>
+            <xs:documentVersionation>Indicates whether to include  stack contents.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="includeCallSite" type="xs:boolean">
           <xs:annotation>
-            <xs:documentation>Indicates whether to include call site (class and method name) in the information sent over the network.</xs:documentation>
+            <xs:documentVersionation>Indicates whether to include call site (class and method name) in the information sent over the network.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="appInfo" type="xs:string">
           <xs:annotation>
-            <xs:documentation>AppInfo field. By default it's the friendly name of the current AppDomain.</xs:documentation>
+            <xs:documentVersionation>AppInfo field. By default it's the friendly name of the current AppDomain.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="ndcItemSeparator" type="xs:string">
           <xs:annotation>
-            <xs:documentation>NDC item separator.</xs:documentation>
+            <xs:documentVersionation>NDC item separator.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="optimizeBufferReuse" type="xs:boolean">
           <xs:annotation>
-            <xs:documentation>Target supports reuse of internal buffers, and doesn't have to constantly allocate new buffers Required for legacy NLog-targets, that expects buffers to remain stable after Write-method exit</xs:documentation>
+            <xs:documentVersionation>Target supports reuse of internal buffers, and doesn't have to constantly allocate new buffers Required for legacy NLog-targets, that expects buffers to remain stable after Write-method exit</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
       </xs:extension>
@@ -521,12 +521,12 @@
     </xs:choice>
     <xs:attribute name="layout" type="SimpleLayoutAttribute">
       <xs:annotation>
-        <xs:documentation>Layout that should be use to calcuate the value for the parameter.</xs:documentation>
+        <xs:documentVersionation>Layout that should be use to calcuate the value for the parameter.</xs:documentVersionation>
       </xs:annotation>
     </xs:attribute>
     <xs:attribute name="name" type="xs:string">
       <xs:annotation>
-        <xs:documentation>Viewer parameter name.</xs:documentation>
+        <xs:documentVersionation>Viewer parameter name.</xs:documentVersionation>
       </xs:annotation>
     </xs:attribute>
   </xs:complexType>
@@ -548,47 +548,47 @@
         </xs:choice>
         <xs:attribute name="name" type="xs:string">
           <xs:annotation>
-            <xs:documentation>Name of the target.</xs:documentation>
+            <xs:documentVersionation>Name of the target.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="layout" type="SimpleLayoutAttribute">
           <xs:annotation>
-            <xs:documentation>Text to be rendered.</xs:documentation>
+            <xs:documentVersionation>Text to be rendered.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="header" type="SimpleLayoutAttribute">
           <xs:annotation>
-            <xs:documentation>Header.</xs:documentation>
+            <xs:documentVersionation>Header.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="footer" type="SimpleLayoutAttribute">
           <xs:annotation>
-            <xs:documentation>Footer.</xs:documentation>
+            <xs:documentVersionation>Footer.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="useDefaultRowHighlightingRules" type="xs:boolean">
           <xs:annotation>
-            <xs:documentation>Indicates whether to use default row highlighting rules.</xs:documentation>
+            <xs:documentVersionation>Indicates whether to use default row highlighting rules.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="detectConsoleAvailable" type="xs:boolean">
           <xs:annotation>
-            <xs:documentation>Indicates whether to auto-check if the console is available. - Disables console writing if Environment.UserInteractive = False (Windows Service) - Disables console writing if Console Standard Input is not available (Non-Console-App)</xs:documentation>
+            <xs:documentVersionation>Indicates whether to auto-check if the console is available. - Disables console writing if Environment.UserInteractive = False (Windows Service) - Disables console writing if Console Standard Input is not available (Non-Console-App)</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="encoding" type="xs:string">
           <xs:annotation>
-            <xs:documentation>The encoding for writing messages to the .</xs:documentation>
+            <xs:documentVersionation>The encoding for writing messages to the .</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="errorStream" type="xs:boolean">
           <xs:annotation>
-            <xs:documentation>Indicates whether the error stream (stderr) should be used instead of the output stream (stdout).</xs:documentation>
+            <xs:documentVersionation>Indicates whether the error stream (stderr) should be used instead of the output stream (stdout).</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="optimizeBufferReuse" type="xs:boolean">
           <xs:annotation>
-            <xs:documentation>Target supports reuse of internal buffers, and doesn't have to constantly allocate new buffers Required for legacy NLog-targets, that expects buffers to remain stable after Write-method exit</xs:documentation>
+            <xs:documentVersionation>Target supports reuse of internal buffers, and doesn't have to constantly allocate new buffers Required for legacy NLog-targets, that expects buffers to remain stable after Write-method exit</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
       </xs:extension>
@@ -623,17 +623,17 @@
     </xs:choice>
     <xs:attribute name="condition" type="Condition">
       <xs:annotation>
-        <xs:documentation>Condition that must be met in order to set the specified foreground and background color.</xs:documentation>
+        <xs:documentVersionation>Condition that must be met in order to set the specified foreground and background color.</xs:documentVersionation>
       </xs:annotation>
     </xs:attribute>
     <xs:attribute name="backgroundColor" type="NLog.Targets.ConsoleOutputColor">
       <xs:annotation>
-        <xs:documentation>Background color.</xs:documentation>
+        <xs:documentVersionation>Background color.</xs:documentVersionation>
       </xs:annotation>
     </xs:attribute>
     <xs:attribute name="foregroundColor" type="NLog.Targets.ConsoleOutputColor">
       <xs:annotation>
-        <xs:documentation>Foreground color.</xs:documentation>
+        <xs:documentVersionation>Foreground color.</xs:documentVersionation>
       </xs:annotation>
     </xs:attribute>
   </xs:complexType>
@@ -649,37 +649,37 @@
     </xs:choice>
     <xs:attribute name="ignoreCase" type="xs:boolean">
       <xs:annotation>
-        <xs:documentation>Indicates whether to ignore case when comparing texts.</xs:documentation>
+        <xs:documentVersionation>Indicates whether to ignore case when comparing texts.</xs:documentVersionation>
       </xs:annotation>
     </xs:attribute>
     <xs:attribute name="regex" type="xs:string">
       <xs:annotation>
-        <xs:documentation>Regular expression to be matched. You must specify either text or regex.</xs:documentation>
+        <xs:documentVersionation>Regular expression to be matched. You must specify either text or regex.</xs:documentVersionation>
       </xs:annotation>
     </xs:attribute>
     <xs:attribute name="text" type="xs:string">
       <xs:annotation>
-        <xs:documentation>Text to be matched. You must specify either text or regex.</xs:documentation>
+        <xs:documentVersionation>Text to be matched. You must specify either text or regex.</xs:documentVersionation>
       </xs:annotation>
     </xs:attribute>
     <xs:attribute name="wholeWords" type="xs:boolean">
       <xs:annotation>
-        <xs:documentation>Indicates whether to match whole words only.</xs:documentation>
+        <xs:documentVersionation>Indicates whether to match whole words only.</xs:documentVersionation>
       </xs:annotation>
     </xs:attribute>
     <xs:attribute name="compileRegex" type="xs:boolean">
       <xs:annotation>
-        <xs:documentation>Compile the ? This can improve the performance, but at the costs of more memory usage. If false, the Regex Cache is used.</xs:documentation>
+        <xs:documentVersionation>Compile the ? This can improve the performance, but at the costs of more memory usage. If false, the Regex Cache is used.</xs:documentVersionation>
       </xs:annotation>
     </xs:attribute>
     <xs:attribute name="backgroundColor" type="NLog.Targets.ConsoleOutputColor">
       <xs:annotation>
-        <xs:documentation>Background color.</xs:documentation>
+        <xs:documentVersionation>Background color.</xs:documentVersionation>
       </xs:annotation>
     </xs:attribute>
     <xs:attribute name="foregroundColor" type="NLog.Targets.ConsoleOutputColor">
       <xs:annotation>
-        <xs:documentation>Foreground color.</xs:documentation>
+        <xs:documentVersionation>Foreground color.</xs:documentVersionation>
       </xs:annotation>
     </xs:attribute>
   </xs:complexType>
@@ -698,42 +698,42 @@
         </xs:choice>
         <xs:attribute name="name" type="xs:string">
           <xs:annotation>
-            <xs:documentation>Name of the target.</xs:documentation>
+            <xs:documentVersionation>Name of the target.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="layout" type="SimpleLayoutAttribute">
           <xs:annotation>
-            <xs:documentation>Text to be rendered.</xs:documentation>
+            <xs:documentVersionation>Text to be rendered.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="header" type="SimpleLayoutAttribute">
           <xs:annotation>
-            <xs:documentation>Header.</xs:documentation>
+            <xs:documentVersionation>Header.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="footer" type="SimpleLayoutAttribute">
           <xs:annotation>
-            <xs:documentation>Footer.</xs:documentation>
+            <xs:documentVersionation>Footer.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="error" type="xs:boolean">
           <xs:annotation>
-            <xs:documentation>Indicates whether to send the log messages to the standard error instead of the standard output.</xs:documentation>
+            <xs:documentVersionation>Indicates whether to send the log messages to the standard error instead of the standard output.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="detectConsoleAvailable" type="xs:boolean">
           <xs:annotation>
-            <xs:documentation>Indicates whether to auto-check if the console is available - Disables console writing if Environment.UserInteractive = False (Windows Service) - Disables console writing if Console Standard Input is not available (Non-Console-App)</xs:documentation>
+            <xs:documentVersionation>Indicates whether to auto-check if the console is available - Disables console writing if Environment.UserInteractive = False (Windows Service) - Disables console writing if Console Standard Input is not available (Non-Console-App)</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="encoding" type="xs:string">
           <xs:annotation>
-            <xs:documentation>The encoding for writing messages to the .</xs:documentation>
+            <xs:documentVersionation>The encoding for writing messages to the .</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="optimizeBufferReuse" type="xs:boolean">
           <xs:annotation>
-            <xs:documentation>Target supports reuse of internal buffers, and doesn't have to constantly allocate new buffers Required for legacy NLog-targets, that expects buffers to remain stable after Write-method exit</xs:documentation>
+            <xs:documentVersionation>Target supports reuse of internal buffers, and doesn't have to constantly allocate new buffers Required for legacy NLog-targets, that expects buffers to remain stable after Write-method exit</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
       </xs:extension>
@@ -763,72 +763,72 @@
         </xs:choice>
         <xs:attribute name="name" type="xs:string">
           <xs:annotation>
-            <xs:documentation>Name of the target.</xs:documentation>
+            <xs:documentVersionation>Name of the target.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="useTransactions" type="xs:boolean">
           <xs:annotation>
-            <xs:documentation>Obsolete - value will be ignored! The logging code always runs outside of transaction. Gets or sets a value indicating whether to use database transactions. Some data providers require this.</xs:documentation>
+            <xs:documentVersionation>Obsolete - value will be ignored! The logging code always runs outside of transaction. Gets or sets a value indicating whether to use database transactions. Some data providers require this.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="dbUserName" type="SimpleLayoutAttribute">
           <xs:annotation>
-            <xs:documentation>Database user name. If the ConnectionString is not provided this value will be used to construct the "User ID=" part of the connection string.</xs:documentation>
+            <xs:documentVersionation>Database user name. If the ConnectionString is not provided this value will be used to construct the "User ID=" part of the connection string.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="dbProvider" type="xs:string">
           <xs:annotation>
-            <xs:documentation>Name of the database provider.</xs:documentation>
+            <xs:documentVersionation>Name of the database provider.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="dbPassword" type="SimpleLayoutAttribute">
           <xs:annotation>
-            <xs:documentation>Database password. If the ConnectionString is not provided this value will be used to construct the "Password=" part of the connection string.</xs:documentation>
+            <xs:documentVersionation>Database password. If the ConnectionString is not provided this value will be used to construct the "Password=" part of the connection string.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="keepConnection" type="xs:boolean">
           <xs:annotation>
-            <xs:documentation>Indicates whether to keep the database connection open between the log events.</xs:documentation>
+            <xs:documentVersionation>Indicates whether to keep the database connection open between the log events.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="dbDatabase" type="SimpleLayoutAttribute">
           <xs:annotation>
-            <xs:documentation>Database name. If the ConnectionString is not provided this value will be used to construct the "Database=" part of the connection string.</xs:documentation>
+            <xs:documentVersionation>Database name. If the ConnectionString is not provided this value will be used to construct the "Database=" part of the connection string.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="connectionStringName" type="xs:string">
           <xs:annotation>
-            <xs:documentation>Name of the connection string (as specified in &lt;connectionStrings&gt; configuration section.</xs:documentation>
+            <xs:documentVersionation>Name of the connection string (as specified in &lt;connectionStrings&gt; configuration section.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="connectionString" type="SimpleLayoutAttribute">
           <xs:annotation>
-            <xs:documentation>Connection string. When provided, it overrides the values specified in DBHost, DBUserName, DBPassword, DBDatabase.</xs:documentation>
+            <xs:documentVersionation>Connection string. When provided, it overrides the values specified in DBHost, DBUserName, DBPassword, DBDatabase.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="dbHost" type="SimpleLayoutAttribute">
           <xs:annotation>
-            <xs:documentation>Database host name. If the ConnectionString is not provided this value will be used to construct the "Server=" part of the connection string.</xs:documentation>
+            <xs:documentVersionation>Database host name. If the ConnectionString is not provided this value will be used to construct the "Server=" part of the connection string.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="installConnectionString" type="SimpleLayoutAttribute">
           <xs:annotation>
-            <xs:documentation>Connection string using for installation and uninstallation. If not provided, regular ConnectionString is being used.</xs:documentation>
+            <xs:documentVersionation>Connection string using for installation and uninstallation. If not provided, regular ConnectionString is being used.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="optimizeBufferReuse" type="xs:boolean">
           <xs:annotation>
-            <xs:documentation>Target supports reuse of internal buffers, and doesn't have to constantly allocate new buffers Required for legacy NLog-targets, that expects buffers to remain stable after Write-method exit</xs:documentation>
+            <xs:documentVersionation>Target supports reuse of internal buffers, and doesn't have to constantly allocate new buffers Required for legacy NLog-targets, that expects buffers to remain stable after Write-method exit</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="commandText" type="SimpleLayoutAttribute">
           <xs:annotation>
-            <xs:documentation>Text of the SQL command to be run on each log level.</xs:documentation>
+            <xs:documentVersionation>Text of the SQL command to be run on each log level.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="commandType" type="System.Data.CommandType">
           <xs:annotation>
-            <xs:documentation>Type of the SQL command to be run on each log level.</xs:documentation>
+            <xs:documentVersionation>Type of the SQL command to be run on each log level.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
       </xs:extension>
@@ -851,22 +851,22 @@
     </xs:choice>
     <xs:attribute name="commandType" type="System.Data.CommandType">
       <xs:annotation>
-        <xs:documentation>Type of the command.</xs:documentation>
+        <xs:documentVersionation>Type of the command.</xs:documentVersionation>
       </xs:annotation>
     </xs:attribute>
     <xs:attribute name="connectionString" type="SimpleLayoutAttribute">
       <xs:annotation>
-        <xs:documentation>Connection string to run the command against. If not provided, connection string from the target is used.</xs:documentation>
+        <xs:documentVersionation>Connection string to run the command against. If not provided, connection string from the target is used.</xs:documentVersionation>
       </xs:annotation>
     </xs:attribute>
     <xs:attribute name="ignoreFailures" type="xs:boolean">
       <xs:annotation>
-        <xs:documentation>Indicates whether to ignore failures.</xs:documentation>
+        <xs:documentVersionation>Indicates whether to ignore failures.</xs:documentVersionation>
       </xs:annotation>
     </xs:attribute>
     <xs:attribute name="text" type="SimpleLayoutAttribute">
       <xs:annotation>
-        <xs:documentation>Command text.</xs:documentation>
+        <xs:documentVersionation>Command text.</xs:documentVersionation>
       </xs:annotation>
     </xs:attribute>
   </xs:complexType>
@@ -880,27 +880,27 @@
     </xs:choice>
     <xs:attribute name="layout" type="SimpleLayoutAttribute">
       <xs:annotation>
-        <xs:documentation>Layout that should be use to calcuate the value for the parameter.</xs:documentation>
+        <xs:documentVersionation>Layout that should be use to calcuate the value for the parameter.</xs:documentVersionation>
       </xs:annotation>
     </xs:attribute>
     <xs:attribute name="name" type="xs:string">
       <xs:annotation>
-        <xs:documentation>Database parameter name.</xs:documentation>
+        <xs:documentVersionation>Database parameter name.</xs:documentVersionation>
       </xs:annotation>
     </xs:attribute>
     <xs:attribute name="precision" type="xs:byte">
       <xs:annotation>
-        <xs:documentation>Database parameter precision.</xs:documentation>
+        <xs:documentVersionation>Database parameter precision.</xs:documentVersionation>
       </xs:annotation>
     </xs:attribute>
     <xs:attribute name="scale" type="xs:byte">
       <xs:annotation>
-        <xs:documentation>Database parameter scale.</xs:documentation>
+        <xs:documentVersionation>Database parameter scale.</xs:documentVersionation>
       </xs:annotation>
     </xs:attribute>
     <xs:attribute name="size" type="xs:integer">
       <xs:annotation>
-        <xs:documentation>Database parameter size.</xs:documentation>
+        <xs:documentVersionation>Database parameter size.</xs:documentVersionation>
       </xs:annotation>
     </xs:attribute>
   </xs:complexType>
@@ -916,27 +916,27 @@
         </xs:choice>
         <xs:attribute name="name" type="xs:string">
           <xs:annotation>
-            <xs:documentation>Name of the target.</xs:documentation>
+            <xs:documentVersionation>Name of the target.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="layout" type="SimpleLayoutAttribute">
           <xs:annotation>
-            <xs:documentation>Text to be rendered.</xs:documentation>
+            <xs:documentVersionation>Text to be rendered.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="header" type="SimpleLayoutAttribute">
           <xs:annotation>
-            <xs:documentation>Header.</xs:documentation>
+            <xs:documentVersionation>Header.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="footer" type="SimpleLayoutAttribute">
           <xs:annotation>
-            <xs:documentation>Footer.</xs:documentation>
+            <xs:documentVersionation>Footer.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="optimizeBufferReuse" type="xs:boolean">
           <xs:annotation>
-            <xs:documentation>Target supports reuse of internal buffers, and doesn't have to constantly allocate new buffers Required for legacy NLog-targets, that expects buffers to remain stable after Write-method exit</xs:documentation>
+            <xs:documentVersionation>Target supports reuse of internal buffers, and doesn't have to constantly allocate new buffers Required for legacy NLog-targets, that expects buffers to remain stable after Write-method exit</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
       </xs:extension>
@@ -952,17 +952,17 @@
         </xs:choice>
         <xs:attribute name="name" type="xs:string">
           <xs:annotation>
-            <xs:documentation>Name of the target.</xs:documentation>
+            <xs:documentVersionation>Name of the target.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="layout" type="SimpleLayoutAttribute">
           <xs:annotation>
-            <xs:documentation>Layout used to format log messages.</xs:documentation>
+            <xs:documentVersionation>Layout used to format log messages.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="optimizeBufferReuse" type="xs:boolean">
           <xs:annotation>
-            <xs:documentation>Target supports reuse of internal buffers, and doesn't have to constantly allocate new buffers Required for legacy NLog-targets, that expects buffers to remain stable after Write-method exit</xs:documentation>
+            <xs:documentVersionation>Target supports reuse of internal buffers, and doesn't have to constantly allocate new buffers Required for legacy NLog-targets, that expects buffers to remain stable after Write-method exit</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
       </xs:extension>
@@ -986,57 +986,57 @@
         </xs:choice>
         <xs:attribute name="name" type="xs:string">
           <xs:annotation>
-            <xs:documentation>Name of the target.</xs:documentation>
+            <xs:documentVersionation>Name of the target.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="layout" type="SimpleLayoutAttribute">
           <xs:annotation>
-            <xs:documentation>Layout used to format log messages.</xs:documentation>
+            <xs:documentVersionation>Layout used to format log messages.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="category" type="SimpleLayoutAttribute">
           <xs:annotation>
-            <xs:documentation>Layout that renders event Category.</xs:documentation>
+            <xs:documentVersionation>Layout that renders event Category.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="eventId" type="SimpleLayoutAttribute">
           <xs:annotation>
-            <xs:documentation>Layout that renders event ID.</xs:documentation>
+            <xs:documentVersionation>Layout that renders event ID.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="log" type="xs:string">
           <xs:annotation>
-            <xs:documentation>Name of the Event Log to write to. This can be System, Application or any user-defined name.</xs:documentation>
+            <xs:documentVersionation>Name of the Event Log to write to. This can be System, Application or any user-defined name.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="machineName" type="xs:string">
           <xs:annotation>
-            <xs:documentation>Name of the machine on which Event Log service is running.</xs:documentation>
+            <xs:documentVersionation>Name of the machine on which Event Log service is running.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="source" type="SimpleLayoutAttribute">
           <xs:annotation>
-            <xs:documentation>Value to be used as the event Source.</xs:documentation>
+            <xs:documentVersionation>Value to be used as the event Source.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="onOverflow" type="NLog.Targets.EventLogTargetOverflowAction">
           <xs:annotation>
-            <xs:documentation>Action to take if the message is larger than the  option.</xs:documentation>
+            <xs:documentVersionation>Action to take if the message is larger than the  option.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="entryType" type="SimpleLayoutAttribute">
           <xs:annotation>
-            <xs:documentation>Optional entrytype. When not set, or when not convertable to  then determined by </xs:documentation>
+            <xs:documentVersionation>Optional entrytype. When not set, or when not convertable to  then determined by </xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="maxMessageLength" type="xs:integer">
           <xs:annotation>
-            <xs:documentation>Message length limit to write to the Event Log.</xs:documentation>
+            <xs:documentVersionation>Message length limit to write to the Event Log.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="optimizeBufferReuse" type="xs:boolean">
           <xs:annotation>
-            <xs:documentation>Target supports reuse of internal buffers, and doesn't have to constantly allocate new buffers Required for legacy NLog-targets, that expects buffers to remain stable after Write-method exit</xs:documentation>
+            <xs:documentVersionation>Target supports reuse of internal buffers, and doesn't have to constantly allocate new buffers Required for legacy NLog-targets, that expects buffers to remain stable after Write-method exit</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
       </xs:extension>
@@ -1059,17 +1059,17 @@
         </xs:choice>
         <xs:attribute name="name" type="xs:string">
           <xs:annotation>
-            <xs:documentation>Name of the target.</xs:documentation>
+            <xs:documentVersionation>Name of the target.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="returnToFirstOnSuccess" type="xs:boolean">
           <xs:annotation>
-            <xs:documentation>Indicates whether to return to the first target after any successful write.</xs:documentation>
+            <xs:documentVersionation>Indicates whether to return to the first target after any successful write.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="optimizeBufferReuse" type="xs:boolean">
           <xs:annotation>
-            <xs:documentation>Target supports reuse of internal buffers, and doesn't have to constantly allocate new buffers Required for legacy NLog-targets, that expects buffers to remain stable after Write-method exit</xs:documentation>
+            <xs:documentVersionation>Target supports reuse of internal buffers, and doesn't have to constantly allocate new buffers Required for legacy NLog-targets, that expects buffers to remain stable after Write-method exit</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
       </xs:extension>
@@ -1120,192 +1120,192 @@
         </xs:choice>
         <xs:attribute name="name" type="xs:string">
           <xs:annotation>
-            <xs:documentation>Name of the target.</xs:documentation>
+            <xs:documentVersionation>Name of the target.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="layout" type="SimpleLayoutAttribute">
           <xs:annotation>
-            <xs:documentation>Text to be rendered.</xs:documentation>
+            <xs:documentVersionation>Text to be rendered.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="header" type="SimpleLayoutAttribute">
           <xs:annotation>
-            <xs:documentation>Header.</xs:documentation>
+            <xs:documentVersionation>Header.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="footer" type="SimpleLayoutAttribute">
           <xs:annotation>
-            <xs:documentation>Footer.</xs:documentation>
+            <xs:documentVersionation>Footer.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="encoding" type="xs:string">
           <xs:annotation>
-            <xs:documentation>File encoding.</xs:documentation>
+            <xs:documentVersionation>File encoding.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="lineEnding" type="LineEndingMode">
           <xs:annotation>
-            <xs:documentation>Line ending mode.</xs:documentation>
+            <xs:documentVersionation>Line ending mode.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="archiveNumbering" type="NLog.Targets.ArchiveNumberingMode">
           <xs:annotation>
-            <xs:documentation>Way file archives are numbered.</xs:documentation>
+            <xs:documentVersionation>Way file archives are numbered.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="archiveFileName" type="SimpleLayoutAttribute">
           <xs:annotation>
-            <xs:documentation>Name of the file to be used for an archive.</xs:documentation>
+            <xs:documentVersionation>Name of the file to be used for an archive.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="archiveEvery" type="NLog.Targets.FileArchivePeriod">
           <xs:annotation>
-            <xs:documentation>Indicates whether to automatically archive log files every time the specified time passes.</xs:documentation>
+            <xs:documentVersionation>Indicates whether to automatically archive log files every time the specified time passes.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="archiveAboveSize" type="xs:long">
           <xs:annotation>
-            <xs:documentation>Size in bytes above which log files will be automatically archived. Warning: combining this with  isn't supported. We cannot create multiple archive files, if they should have the same name. Choose: </xs:documentation>
+            <xs:documentVersionation>Size in bytes above which log files will be automatically archived. Warning: combining this with  isn't supported. We cannot create multiple archive files, if they should have the same name. Choose: </xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="enableArchiveFileCompression" type="xs:boolean">
           <xs:annotation>
-            <xs:documentation>Indicates whether to compress archive files into the zip archive format.</xs:documentation>
+            <xs:documentVersionation>Indicates whether to compress archive files into the zip archive format.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="maxArchiveFiles" type="xs:integer">
           <xs:annotation>
-            <xs:documentation>Maximum number of archive files that should be kept.</xs:documentation>
+            <xs:documentVersionation>Maximum number of archive files that should be kept.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="forceManaged" type="xs:boolean">
           <xs:annotation>
-            <xs:documentation>Gets or set a value indicating whether a managed file stream is forced, instead of using the native implementation.</xs:documentation>
+            <xs:documentVersionation>Gets or set a value indicating whether a managed file stream is forced, instead of using the native implementation.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="archiveFileKind" type="NLog.Targets.FilePathKind">
           <xs:annotation>
-            <xs:documentation>Is the  an absolute or relative path?</xs:documentation>
+            <xs:documentVersionation>Is the  an absolute or relative path?</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="cleanupFileName" type="xs:boolean">
           <xs:annotation>
-            <xs:documentation>Cleanup invalid values in a filename, e.g. slashes in a filename. If set to true, this can impact the performance of massive writes. If set to false, nothing gets written when the filename is wrong.</xs:documentation>
+            <xs:documentVersionation>Cleanup invalid values in a filename, e.g. slashes in a filename. If set to true, this can impact the performance of massive writes. If set to false, nothing gets written when the filename is wrong.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="discardAll" type="xs:boolean">
           <xs:annotation>
-            <xs:documentation>Whether or not this target should just discard all data that its asked to write. Mostly used for when testing NLog Stack except final write</xs:documentation>
+            <xs:documentVersionation>Whether or not this target should just discard all data that its asked to write. Mostly used for when testing NLog Stack except final write</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="fileNameKind" type="NLog.Targets.FilePathKind">
           <xs:annotation>
-            <xs:documentation>Is the  an absolute or relative path?</xs:documentation>
+            <xs:documentVersionation>Is the  an absolute or relative path?</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="forceMutexConcurrentWrites" type="xs:boolean">
           <xs:annotation>
-            <xs:documentation>Value indicationg whether file creation calls should be synchronized by a system global mutex.</xs:documentation>
+            <xs:documentVersionation>Value indicationg whether file creation calls should be synchronized by a system global mutex.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="writeFooterOnArchivingOnly" type="xs:boolean">
           <xs:annotation>
-            <xs:documentation>Indicates whether the footer should be written only when the file is archived.</xs:documentation>
+            <xs:documentVersionation>Indicates whether the footer should be written only when the file is archived.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="fileName" type="SimpleLayoutAttribute">
           <xs:annotation>
-            <xs:documentation>Name of the file to write to.</xs:documentation>
+            <xs:documentVersionation>Name of the file to write to.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="archiveDateFormat" type="xs:string">
           <xs:annotation>
-            <xs:documentation>Value specifying the date format to use when archiving files.</xs:documentation>
+            <xs:documentVersionation>Value specifying the date format to use when archiving files.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="archiveOldFileOnStartup" type="xs:boolean">
           <xs:annotation>
-            <xs:documentation>Indicates whether to archive old log file on startup.</xs:documentation>
+            <xs:documentVersionation>Indicates whether to archive old log file on startup.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="createDirs" type="xs:boolean">
           <xs:annotation>
-            <xs:documentation>Indicates whether to create directories if they do not exist.</xs:documentation>
+            <xs:documentVersionation>Indicates whether to create directories if they do not exist.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="enableFileDelete" type="xs:boolean">
           <xs:annotation>
-            <xs:documentation>Indicates whether to enable log file(s) to be deleted.</xs:documentation>
+            <xs:documentVersionation>Indicates whether to enable log file(s) to be deleted.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="fileAttributes" type="NLog.Targets.Win32FileAttributes">
           <xs:annotation>
-            <xs:documentation>File attributes (Windows only).</xs:documentation>
+            <xs:documentVersionation>File attributes (Windows only).</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="deleteOldFileOnStartup" type="xs:boolean">
           <xs:annotation>
-            <xs:documentation>Indicates whether to delete old log file on startup.</xs:documentation>
+            <xs:documentVersionation>Indicates whether to delete old log file on startup.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="replaceFileContentsOnEachWrite" type="xs:boolean">
           <xs:annotation>
-            <xs:documentation>Indicates whether to replace file contents on each write instead of appending log message at the end.</xs:documentation>
+            <xs:documentVersionation>Indicates whether to replace file contents on each write instead of appending log message at the end.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="concurrentWrites" type="xs:boolean">
           <xs:annotation>
-            <xs:documentation>Indicates whether concurrent writes to the log file by multiple processes on the same host.</xs:documentation>
+            <xs:documentVersionation>Indicates whether concurrent writes to the log file by multiple processes on the same host.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="keepFileOpen" type="xs:boolean">
           <xs:annotation>
-            <xs:documentation>Indicates whether to keep log file open instead of opening and closing it on each logging event.</xs:documentation>
+            <xs:documentVersionation>Indicates whether to keep log file open instead of opening and closing it on each logging event.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="maxLogFilenames" type="xs:integer">
           <xs:annotation>
-            <xs:documentation>Maximum number of log filenames that should be stored as existing.</xs:documentation>
+            <xs:documentVersionation>Maximum number of log filenames that should be stored as existing.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="networkWrites" type="xs:boolean">
           <xs:annotation>
-            <xs:documentation>Indicates whether concurrent writes to the log file by multiple processes on different network hosts.</xs:documentation>
+            <xs:documentVersionation>Indicates whether concurrent writes to the log file by multiple processes on different network hosts.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="openFileCacheSize" type="xs:integer">
           <xs:annotation>
-            <xs:documentation>Number of files to be kept open. Setting this to a higher value may improve performance in a situation where a single File target is writing to many files (such as splitting by level or by logger).</xs:documentation>
+            <xs:documentVersionation>Number of files to be kept open. Setting this to a higher value may improve performance in a situation where a single File target is writing to many files (such as splitting by level or by logger).</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="openFileCacheTimeout" type="xs:integer">
           <xs:annotation>
-            <xs:documentation>Maximum number of seconds that files are kept open. If this number is negative the files are not automatically closed after a period of inactivity.</xs:documentation>
+            <xs:documentVersionation>Maximum number of seconds that files are kept open. If this number is negative the files are not automatically closed after a period of inactivity.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="optimizeBufferReuse" type="xs:boolean">
           <xs:annotation>
-            <xs:documentation>Target supports reuse of internal buffers, and doesn't have to constantly allocate new buffers Required for legacy NLog-targets, that expects buffers to remain stable after Write-method exit</xs:documentation>
+            <xs:documentVersionation>Target supports reuse of internal buffers, and doesn't have to constantly allocate new buffers Required for legacy NLog-targets, that expects buffers to remain stable after Write-method exit</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="bufferSize" type="xs:integer">
           <xs:annotation>
-            <xs:documentation>Log file buffer size in bytes.</xs:documentation>
+            <xs:documentVersionation>Log file buffer size in bytes.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="autoFlush" type="xs:boolean">
           <xs:annotation>
-            <xs:documentation>Indicates whether to automatically flush the file buffers after each log message.</xs:documentation>
+            <xs:documentVersionation>Indicates whether to automatically flush the file buffers after each log message.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="concurrentWriteAttemptDelay" type="xs:integer">
           <xs:annotation>
-            <xs:documentation>Delay in milliseconds to wait before attempting to write to the file again.</xs:documentation>
+            <xs:documentVersionation>Delay in milliseconds to wait before attempting to write to the file again.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="concurrentWriteAttempts" type="xs:integer">
           <xs:annotation>
-            <xs:documentation>Number of times the write is appended on the file before NLog discards the log message.</xs:documentation>
+            <xs:documentVersionation>Number of times the write is appended on the file before NLog discards the log message.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
       </xs:extension>
@@ -1366,17 +1366,17 @@
         </xs:choice>
         <xs:attribute name="name" type="xs:string">
           <xs:annotation>
-            <xs:documentation>Name of the target.</xs:documentation>
+            <xs:documentVersionation>Name of the target.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="condition" type="Condition">
           <xs:annotation>
-            <xs:documentation>Condition expression. Log events who meet this condition will be forwarded to the wrapped target.</xs:documentation>
+            <xs:documentVersionation>Condition expression. Log events who meet this condition will be forwarded to the wrapped target.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="optimizeBufferReuse" type="xs:boolean">
           <xs:annotation>
-            <xs:documentation>Target supports reuse of internal buffers, and doesn't have to constantly allocate new buffers Required for legacy NLog-targets, that expects buffers to remain stable after Write-method exit</xs:documentation>
+            <xs:documentVersionation>Target supports reuse of internal buffers, and doesn't have to constantly allocate new buffers Required for legacy NLog-targets, that expects buffers to remain stable after Write-method exit</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
       </xs:extension>
@@ -1398,47 +1398,47 @@
         </xs:choice>
         <xs:attribute name="name" type="xs:string">
           <xs:annotation>
-            <xs:documentation>Name of the target.</xs:documentation>
+            <xs:documentVersionation>Name of the target.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="domain" type="xs:string">
           <xs:annotation>
-            <xs:documentation>Windows domain name to change context to.</xs:documentation>
+            <xs:documentVersionation>Windows domain name to change context to.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="impersonationLevel" type="NLog.Targets.Wrappers.SecurityImpersonationLevel">
           <xs:annotation>
-            <xs:documentation>Required impersonation level.</xs:documentation>
+            <xs:documentVersionation>Required impersonation level.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="logOnProvider" type="NLog.Targets.Wrappers.LogOnProviderType">
           <xs:annotation>
-            <xs:documentation>Type of the logon provider.</xs:documentation>
+            <xs:documentVersionation>Type of the logon provider.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="logOnType" type="NLog.Targets.Wrappers.SecurityLogOnType">
           <xs:annotation>
-            <xs:documentation>Logon Type.</xs:documentation>
+            <xs:documentVersionation>Logon Type.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="password" type="xs:string">
           <xs:annotation>
-            <xs:documentation>User account password.</xs:documentation>
+            <xs:documentVersionation>User account password.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="revertToSelf" type="xs:boolean">
           <xs:annotation>
-            <xs:documentation>Indicates whether to revert to the credentials of the process instead of impersonating another user.</xs:documentation>
+            <xs:documentVersionation>Indicates whether to revert to the credentials of the process instead of impersonating another user.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="userName" type="xs:string">
           <xs:annotation>
-            <xs:documentation>Username to change context to.</xs:documentation>
+            <xs:documentVersionation>Username to change context to.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="optimizeBufferReuse" type="xs:boolean">
           <xs:annotation>
-            <xs:documentation>Target supports reuse of internal buffers, and doesn't have to constantly allocate new buffers Required for legacy NLog-targets, that expects buffers to remain stable after Write-method exit</xs:documentation>
+            <xs:documentVersionation>Target supports reuse of internal buffers, and doesn't have to constantly allocate new buffers Required for legacy NLog-targets, that expects buffers to remain stable after Write-method exit</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
       </xs:extension>
@@ -1478,22 +1478,22 @@
         </xs:choice>
         <xs:attribute name="name" type="xs:string">
           <xs:annotation>
-            <xs:documentation>Name of the target.</xs:documentation>
+            <xs:documentVersionation>Name of the target.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="interval" type="xs:string">
           <xs:annotation>
-            <xs:documentation>Interval in which messages will be written up to the  number of messages.</xs:documentation>
+            <xs:documentVersionation>Interval in which messages will be written up to the  number of messages.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="messageLimit" type="xs:integer">
           <xs:annotation>
-            <xs:documentation>Maximum allowed number of messages written per .</xs:documentation>
+            <xs:documentVersionation>Maximum allowed number of messages written per .</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="optimizeBufferReuse" type="xs:boolean">
           <xs:annotation>
-            <xs:documentation>Target supports reuse of internal buffers, and doesn't have to constantly allocate new buffers Required for legacy NLog-targets, that expects buffers to remain stable after Write-method exit</xs:documentation>
+            <xs:documentVersionation>Target supports reuse of internal buffers, and doesn't have to constantly allocate new buffers Required for legacy NLog-targets, that expects buffers to remain stable after Write-method exit</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
       </xs:extension>
@@ -1515,42 +1515,42 @@
         </xs:choice>
         <xs:attribute name="name" type="xs:string">
           <xs:annotation>
-            <xs:documentation>Name of the target.</xs:documentation>
+            <xs:documentVersionation>Name of the target.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="endpointAddress" type="xs:string">
           <xs:annotation>
-            <xs:documentation>Endpoint address.</xs:documentation>
+            <xs:documentVersionation>Endpoint address.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="endpointConfigurationName" type="xs:string">
           <xs:annotation>
-            <xs:documentation>Name of the endpoint configuration in WCF configuration file.</xs:documentation>
+            <xs:documentVersionation>Name of the endpoint configuration in WCF configuration file.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="useOneWayContract" type="xs:boolean">
           <xs:annotation>
-            <xs:documentation>Indicates whether to use a WCF service contract that is one way (fire and forget) or two way (request-reply)</xs:documentation>
+            <xs:documentVersionation>Indicates whether to use a WCF service contract that is one way (fire and forget) or two way (request-reply)</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="clientId" type="SimpleLayoutAttribute">
           <xs:annotation>
-            <xs:documentation>Client ID.</xs:documentation>
+            <xs:documentVersionation>Client ID.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="includeEventProperties" type="xs:boolean">
           <xs:annotation>
-            <xs:documentation>Indicates whether to include per-event properties in the payload sent to the server.</xs:documentation>
+            <xs:documentVersionation>Indicates whether to include per-event properties in the payload sent to the server.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="useBinaryEncoding" type="xs:boolean">
           <xs:annotation>
-            <xs:documentation>Indicates whether to use binary message encoding.</xs:documentation>
+            <xs:documentVersionation>Indicates whether to use binary message encoding.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="optimizeBufferReuse" type="xs:boolean">
           <xs:annotation>
-            <xs:documentation>Target supports reuse of internal buffers, and doesn't have to constantly allocate new buffers Required for legacy NLog-targets, that expects buffers to remain stable after Write-method exit</xs:documentation>
+            <xs:documentVersionation>Target supports reuse of internal buffers, and doesn't have to constantly allocate new buffers Required for legacy NLog-targets, that expects buffers to remain stable after Write-method exit</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
       </xs:extension>
@@ -1564,17 +1564,17 @@
     </xs:choice>
     <xs:attribute name="layout" type="SimpleLayoutAttribute">
       <xs:annotation>
-        <xs:documentation>Layout that should be use to calculate the value for the parameter.</xs:documentation>
+        <xs:documentVersionation>Layout that should be use to calculate the value for the parameter.</xs:documentVersionation>
       </xs:annotation>
     </xs:attribute>
     <xs:attribute name="name" type="xs:string">
       <xs:annotation>
-        <xs:documentation>Name of the parameter.</xs:documentation>
+        <xs:documentVersionation>Name of the parameter.</xs:documentVersionation>
       </xs:annotation>
     </xs:attribute>
     <xs:attribute name="type" type="xs:string">
       <xs:annotation>
-        <xs:documentation>Type of the parameter.</xs:documentation>
+        <xs:documentVersionation>Type of the parameter.</xs:documentVersionation>
       </xs:annotation>
     </xs:attribute>
   </xs:complexType>
@@ -1611,132 +1611,132 @@
         </xs:choice>
         <xs:attribute name="name" type="xs:string">
           <xs:annotation>
-            <xs:documentation>Name of the target.</xs:documentation>
+            <xs:documentVersionation>Name of the target.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="layout" type="SimpleLayoutAttribute">
           <xs:annotation>
-            <xs:documentation>Text to be rendered.</xs:documentation>
+            <xs:documentVersionation>Text to be rendered.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="header" type="SimpleLayoutAttribute">
           <xs:annotation>
-            <xs:documentation>Header.</xs:documentation>
+            <xs:documentVersionation>Header.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="footer" type="SimpleLayoutAttribute">
           <xs:annotation>
-            <xs:documentation>Footer.</xs:documentation>
+            <xs:documentVersionation>Footer.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="html" type="xs:boolean">
           <xs:annotation>
-            <xs:documentation>Indicates whether to send message as HTML instead of plain text.</xs:documentation>
+            <xs:documentVersionation>Indicates whether to send message as HTML instead of plain text.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="encoding" type="xs:string">
           <xs:annotation>
-            <xs:documentation>Encoding to be used for sending e-mail.</xs:documentation>
+            <xs:documentVersionation>Encoding to be used for sending e-mail.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="addNewLines" type="xs:boolean">
           <xs:annotation>
-            <xs:documentation>Indicates whether to add new lines between log entries.</xs:documentation>
+            <xs:documentVersionation>Indicates whether to add new lines between log entries.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="cc" type="SimpleLayoutAttribute">
           <xs:annotation>
-            <xs:documentation>CC email addresses separated by semicolons (e.g. john@domain.com;jane@domain.com).</xs:documentation>
+            <xs:documentVersionation>CC email addresses separated by semicolons (e.g. john@domain.com;jane@domain.com).</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="to" type="SimpleLayoutAttribute">
           <xs:annotation>
-            <xs:documentation>Recipients' email addresses separated by semicolons (e.g. john@domain.com;jane@domain.com).</xs:documentation>
+            <xs:documentVersionation>Recipients' email addresses separated by semicolons (e.g. john@domain.com;jane@domain.com).</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="bcc" type="SimpleLayoutAttribute">
           <xs:annotation>
-            <xs:documentation>BCC email addresses separated by semicolons (e.g. john@domain.com;jane@domain.com).</xs:documentation>
+            <xs:documentVersionation>BCC email addresses separated by semicolons (e.g. john@domain.com;jane@domain.com).</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="body" type="SimpleLayoutAttribute">
           <xs:annotation>
-            <xs:documentation>Mail message body (repeated for each log message send in one mail).</xs:documentation>
+            <xs:documentVersionation>Mail message body (repeated for each log message send in one mail).</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="subject" type="SimpleLayoutAttribute">
           <xs:annotation>
-            <xs:documentation>Mail subject.</xs:documentation>
+            <xs:documentVersionation>Mail subject.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="from" type="SimpleLayoutAttribute">
           <xs:annotation>
-            <xs:documentation>Sender's email address (e.g. joe@domain.com).</xs:documentation>
+            <xs:documentVersionation>Sender's email address (e.g. joe@domain.com).</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="timeout" type="xs:integer">
           <xs:annotation>
-            <xs:documentation>Indicates the SMTP client timeout.</xs:documentation>
+            <xs:documentVersionation>Indicates the SMTP client timeout.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="priority" type="SimpleLayoutAttribute">
           <xs:annotation>
-            <xs:documentation>Priority used for sending mails.</xs:documentation>
+            <xs:documentVersionation>Priority used for sending mails.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="replaceNewlineWithBrTagInHtml" type="xs:boolean">
           <xs:annotation>
-            <xs:documentation>Indicates whether NewLine characters in the body should be replaced with  tags.</xs:documentation>
+            <xs:documentVersionation>Indicates whether NewLine characters in the body should be replaced with  tags.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="optimizeBufferReuse" type="xs:boolean">
           <xs:annotation>
-            <xs:documentation>Target supports reuse of internal buffers, and doesn't have to constantly allocate new buffers Required for legacy NLog-targets, that expects buffers to remain stable after Write-method exit</xs:documentation>
+            <xs:documentVersionation>Target supports reuse of internal buffers, and doesn't have to constantly allocate new buffers Required for legacy NLog-targets, that expects buffers to remain stable after Write-method exit</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="smtpServer" type="SimpleLayoutAttribute">
           <xs:annotation>
-            <xs:documentation>SMTP Server to be used for sending.</xs:documentation>
+            <xs:documentVersionation>SMTP Server to be used for sending.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="smtpAuthentication" type="NLog.Targets.SmtpAuthenticationMode">
           <xs:annotation>
-            <xs:documentation>SMTP Authentication mode.</xs:documentation>
+            <xs:documentVersionation>SMTP Authentication mode.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="smtpUserName" type="SimpleLayoutAttribute">
           <xs:annotation>
-            <xs:documentation>Username used to connect to SMTP server (used when SmtpAuthentication is set to "basic").</xs:documentation>
+            <xs:documentVersionation>Username used to connect to SMTP server (used when SmtpAuthentication is set to "basic").</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="smtpPassword" type="SimpleLayoutAttribute">
           <xs:annotation>
-            <xs:documentation>Password used to authenticate against SMTP server (used when SmtpAuthentication is set to "basic").</xs:documentation>
+            <xs:documentVersionation>Password used to authenticate against SMTP server (used when SmtpAuthentication is set to "basic").</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="enableSsl" type="xs:boolean">
           <xs:annotation>
-            <xs:documentation>Indicates whether SSL (secure sockets layer) should be used when communicating with SMTP server.</xs:documentation>
+            <xs:documentVersionation>Indicates whether SSL (secure sockets layer) should be used when communicating with SMTP server.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="smtpPort" type="xs:integer">
           <xs:annotation>
-            <xs:documentation>Port number that SMTP Server is listening on.</xs:documentation>
+            <xs:documentVersionation>Port number that SMTP Server is listening on.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="useSystemNetMailSettings" type="xs:boolean">
           <xs:annotation>
-            <xs:documentation>Indicates whether the default Settings from System.Net.MailSettings should be used.</xs:documentation>
+            <xs:documentVersionation>Indicates whether the default Settings from System.Net.MailSettings should be used.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="pickupDirectoryLocation" type="xs:string">
           <xs:annotation>
-            <xs:documentation>Folder where applications save mail messages to be processed by the local SMTP server.</xs:documentation>
+            <xs:documentVersionation>Folder where applications save mail messages to be processed by the local SMTP server.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="deliveryMethod" type="System.Net.Mail.SmtpDeliveryMethod">
           <xs:annotation>
-            <xs:documentation>Specifies how outgoing email messages will be handled.</xs:documentation>
+            <xs:documentVersionation>Specifies how outgoing email messages will be handled.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
       </xs:extension>
@@ -1766,17 +1766,17 @@
         </xs:choice>
         <xs:attribute name="name" type="xs:string">
           <xs:annotation>
-            <xs:documentation>Name of the target.</xs:documentation>
+            <xs:documentVersionation>Name of the target.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="layout" type="SimpleLayoutAttribute">
           <xs:annotation>
-            <xs:documentation>Layout used to format log messages.</xs:documentation>
+            <xs:documentVersionation>Layout used to format log messages.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="optimizeBufferReuse" type="xs:boolean">
           <xs:annotation>
-            <xs:documentation>Target supports reuse of internal buffers, and doesn't have to constantly allocate new buffers Required for legacy NLog-targets, that expects buffers to remain stable after Write-method exit</xs:documentation>
+            <xs:documentVersionation>Target supports reuse of internal buffers, and doesn't have to constantly allocate new buffers Required for legacy NLog-targets, that expects buffers to remain stable after Write-method exit</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
       </xs:extension>
@@ -1799,52 +1799,52 @@
         </xs:choice>
         <xs:attribute name="name" type="xs:string">
           <xs:annotation>
-            <xs:documentation>Name of the target.</xs:documentation>
+            <xs:documentVersionation>Name of the target.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="layout" type="SimpleLayoutAttribute">
           <xs:annotation>
-            <xs:documentation>Layout used to format log messages.</xs:documentation>
+            <xs:documentVersionation>Layout used to format log messages.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="encoding" type="xs:string">
           <xs:annotation>
-            <xs:documentation>Encoding to be used when writing text to the queue.</xs:documentation>
+            <xs:documentVersionation>Encoding to be used when writing text to the queue.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="useXmlEncoding" type="xs:boolean">
           <xs:annotation>
-            <xs:documentation>Indicates whether to use the XML format when serializing message. This will also disable creating queues.</xs:documentation>
+            <xs:documentVersionation>Indicates whether to use the XML format when serializing message. This will also disable creating queues.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="checkIfQueueExists" type="xs:boolean">
           <xs:annotation>
-            <xs:documentation>Indicates whether to check if a queue exists before writing to it.</xs:documentation>
+            <xs:documentVersionation>Indicates whether to check if a queue exists before writing to it.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="optimizeBufferReuse" type="xs:boolean">
           <xs:annotation>
-            <xs:documentation>Target supports reuse of internal buffers, and doesn't have to constantly allocate new buffers Required for legacy NLog-targets, that expects buffers to remain stable after Write-method exit</xs:documentation>
+            <xs:documentVersionation>Target supports reuse of internal buffers, and doesn't have to constantly allocate new buffers Required for legacy NLog-targets, that expects buffers to remain stable after Write-method exit</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="createQueueIfNotExists" type="xs:boolean">
           <xs:annotation>
-            <xs:documentation>Indicates whether to create the queue if it doesn't exists.</xs:documentation>
+            <xs:documentVersionation>Indicates whether to create the queue if it doesn't exists.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="label" type="SimpleLayoutAttribute">
           <xs:annotation>
-            <xs:documentation>Label to associate with each message.</xs:documentation>
+            <xs:documentVersionation>Label to associate with each message.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="queue" type="SimpleLayoutAttribute">
           <xs:annotation>
-            <xs:documentation>Name of the queue to write to.</xs:documentation>
+            <xs:documentVersionation>Name of the queue to write to.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="recoverable" type="xs:boolean">
           <xs:annotation>
-            <xs:documentation>Indicates whether to use recoverable messages (with guaranteed delivery).</xs:documentation>
+            <xs:documentVersionation>Indicates whether to use recoverable messages (with guaranteed delivery).</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
       </xs:extension>
@@ -1862,22 +1862,22 @@
         </xs:choice>
         <xs:attribute name="name" type="xs:string">
           <xs:annotation>
-            <xs:documentation>Name of the target.</xs:documentation>
+            <xs:documentVersionation>Name of the target.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="className" type="xs:string">
           <xs:annotation>
-            <xs:documentation>Class name.</xs:documentation>
+            <xs:documentVersionation>Class name.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="methodName" type="xs:string">
           <xs:annotation>
-            <xs:documentation>Method name. The method must be public and static. Use the AssemblyQualifiedName , https://msdn.microsoft.com/en-us/library/system.type.assemblyqualifiedname(v=vs.110).aspx e.g.</xs:documentation>
+            <xs:documentVersionation>Method name. The method must be public and static. Use the AssemblyQualifiedName , https://msdn.microsoft.com/en-us/library/system.type.assemblyqualifiedname(v=vs.110).aspx e.g.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="optimizeBufferReuse" type="xs:boolean">
           <xs:annotation>
-            <xs:documentation>Target supports reuse of internal buffers, and doesn't have to constantly allocate new buffers Required for legacy NLog-targets, that expects buffers to remain stable after Write-method exit</xs:documentation>
+            <xs:documentVersionation>Target supports reuse of internal buffers, and doesn't have to constantly allocate new buffers Required for legacy NLog-targets, that expects buffers to remain stable after Write-method exit</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
       </xs:extension>
@@ -1904,72 +1904,72 @@
         </xs:choice>
         <xs:attribute name="name" type="xs:string">
           <xs:annotation>
-            <xs:documentation>Name of the target.</xs:documentation>
+            <xs:documentVersionation>Name of the target.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="layout" type="SimpleLayoutAttribute">
           <xs:annotation>
-            <xs:documentation>Layout used to format log messages.</xs:documentation>
+            <xs:documentVersionation>Layout used to format log messages.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="encoding" type="xs:string">
           <xs:annotation>
-            <xs:documentation>Encoding to be used.</xs:documentation>
+            <xs:documentVersionation>Encoding to be used.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="lineEnding" type="LineEndingMode">
           <xs:annotation>
-            <xs:documentation>End of line value if a newline is appended at the end of log message .</xs:documentation>
+            <xs:documentVersionation>End of line value if a newline is appended at the end of log message .</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="maxMessageSize" type="xs:integer">
           <xs:annotation>
-            <xs:documentation>Maximum message size in bytes.</xs:documentation>
+            <xs:documentVersionation>Maximum message size in bytes.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="newLine" type="xs:boolean">
           <xs:annotation>
-            <xs:documentation>Indicates whether to append newline at the end of log message.</xs:documentation>
+            <xs:documentVersionation>Indicates whether to append newline at the end of log message.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="onConnectionOverflow" type="NLog.Targets.NetworkTargetConnectionsOverflowAction">
           <xs:annotation>
-            <xs:documentation>Action that should be taken if the will be more connections than .</xs:documentation>
+            <xs:documentVersionation>Action that should be taken if the will be more connections than .</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="onOverflow" type="NLog.Targets.NetworkTargetOverflowAction">
           <xs:annotation>
-            <xs:documentation>Action that should be taken if the message is larger than maxMessageSize.</xs:documentation>
+            <xs:documentVersionation>Action that should be taken if the message is larger than maxMessageSize.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="address" type="SimpleLayoutAttribute">
           <xs:annotation>
-            <xs:documentation>Network address.</xs:documentation>
+            <xs:documentVersionation>Network address.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="connectionCacheSize" type="xs:integer">
           <xs:annotation>
-            <xs:documentation>Size of the connection cache (number of connections which are kept alive).</xs:documentation>
+            <xs:documentVersionation>Size of the connection cache (number of connections which are kept alive).</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="keepConnection" type="xs:boolean">
           <xs:annotation>
-            <xs:documentation>Indicates whether to keep connection open whenever possible.</xs:documentation>
+            <xs:documentVersionation>Indicates whether to keep connection open whenever possible.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="maxConnections" type="xs:integer">
           <xs:annotation>
-            <xs:documentation>Maximum current connections. 0 = no maximum.</xs:documentation>
+            <xs:documentVersionation>Maximum current connections. 0 = no maximum.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="maxQueueSize" type="xs:integer">
           <xs:annotation>
-            <xs:documentation>Maximum queue size.</xs:documentation>
+            <xs:documentVersionation>Maximum queue size.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="optimizeBufferReuse" type="xs:boolean">
           <xs:annotation>
-            <xs:documentation>Target supports reuse of internal buffers, and doesn't have to constantly allocate new buffers Required for legacy NLog-targets, that expects buffers to remain stable after Write-method exit</xs:documentation>
+            <xs:documentVersionation>Target supports reuse of internal buffers, and doesn't have to constantly allocate new buffers Required for legacy NLog-targets, that expects buffers to remain stable after Write-method exit</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
       </xs:extension>
@@ -2004,107 +2004,107 @@
         </xs:choice>
         <xs:attribute name="name" type="xs:string">
           <xs:annotation>
-            <xs:documentation>Name of the target.</xs:documentation>
+            <xs:documentVersionation>Name of the target.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="encoding" type="xs:string">
           <xs:annotation>
-            <xs:documentation>Encoding to be used.</xs:documentation>
+            <xs:documentVersionation>Encoding to be used.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="layout" type="SimpleLayoutAttribute">
           <xs:annotation>
-            <xs:documentation>Instance of  that is used to format log messages.</xs:documentation>
+            <xs:documentVersionation>Instance of  that is used to format log messages.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="lineEnding" type="LineEndingMode">
           <xs:annotation>
-            <xs:documentation>End of line value if a newline is appended at the end of log message .</xs:documentation>
+            <xs:documentVersionation>End of line value if a newline is appended at the end of log message .</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="maxMessageSize" type="xs:integer">
           <xs:annotation>
-            <xs:documentation>Maximum message size in bytes.</xs:documentation>
+            <xs:documentVersionation>Maximum message size in bytes.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="newLine" type="xs:boolean">
           <xs:annotation>
-            <xs:documentation>Indicates whether to append newline at the end of log message.</xs:documentation>
+            <xs:documentVersionation>Indicates whether to append newline at the end of log message.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="onConnectionOverflow" type="NLog.Targets.NetworkTargetConnectionsOverflowAction">
           <xs:annotation>
-            <xs:documentation>Action that should be taken if the will be more connections than .</xs:documentation>
+            <xs:documentVersionation>Action that should be taken if the will be more connections than .</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="onOverflow" type="NLog.Targets.NetworkTargetOverflowAction">
           <xs:annotation>
-            <xs:documentation>Action that should be taken if the message is larger than maxMessageSize.</xs:documentation>
+            <xs:documentVersionation>Action that should be taken if the message is larger than maxMessageSize.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="maxConnections" type="xs:integer">
           <xs:annotation>
-            <xs:documentation>Maximum current connections. 0 = no maximum.</xs:documentation>
+            <xs:documentVersionation>Maximum current connections. 0 = no maximum.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="keepConnection" type="xs:boolean">
           <xs:annotation>
-            <xs:documentation>Indicates whether to keep connection open whenever possible.</xs:documentation>
+            <xs:documentVersionation>Indicates whether to keep connection open whenever possible.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="connectionCacheSize" type="xs:integer">
           <xs:annotation>
-            <xs:documentation>Size of the connection cache (number of connections which are kept alive).</xs:documentation>
+            <xs:documentVersionation>Size of the connection cache (number of connections which are kept alive).</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="address" type="SimpleLayoutAttribute">
           <xs:annotation>
-            <xs:documentation>Network address.</xs:documentation>
+            <xs:documentVersionation>Network address.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="maxQueueSize" type="xs:integer">
           <xs:annotation>
-            <xs:documentation>Maximum queue size.</xs:documentation>
+            <xs:documentVersionation>Maximum queue size.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="includeMdc" type="xs:boolean">
           <xs:annotation>
-            <xs:documentation>Indicates whether to include  dictionary contents.</xs:documentation>
+            <xs:documentVersionation>Indicates whether to include  dictionary contents.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="includeSourceInfo" type="xs:boolean">
           <xs:annotation>
-            <xs:documentation>Indicates whether to include source info (file name and line number) in the information sent over the network.</xs:documentation>
+            <xs:documentVersionation>Indicates whether to include source info (file name and line number) in the information sent over the network.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="includeNLogData" type="xs:boolean">
           <xs:annotation>
-            <xs:documentation>Indicates whether to include NLog-specific extensions to log4j schema.</xs:documentation>
+            <xs:documentVersionation>Indicates whether to include NLog-specific extensions to log4j schema.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="includeNdc" type="xs:boolean">
           <xs:annotation>
-            <xs:documentation>Indicates whether to include  stack contents.</xs:documentation>
+            <xs:documentVersionation>Indicates whether to include  stack contents.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="includeCallSite" type="xs:boolean">
           <xs:annotation>
-            <xs:documentation>Indicates whether to include call site (class and method name) in the information sent over the network.</xs:documentation>
+            <xs:documentVersionation>Indicates whether to include call site (class and method name) in the information sent over the network.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="appInfo" type="xs:string">
           <xs:annotation>
-            <xs:documentation>AppInfo field. By default it's the friendly name of the current AppDomain.</xs:documentation>
+            <xs:documentVersionation>AppInfo field. By default it's the friendly name of the current AppDomain.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="ndcItemSeparator" type="xs:string">
           <xs:annotation>
-            <xs:documentation>NDC item separator.</xs:documentation>
+            <xs:documentVersionation>NDC item separator.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="optimizeBufferReuse" type="xs:boolean">
           <xs:annotation>
-            <xs:documentation>Target supports reuse of internal buffers, and doesn't have to constantly allocate new buffers Required for legacy NLog-targets, that expects buffers to remain stable after Write-method exit</xs:documentation>
+            <xs:documentVersionation>Target supports reuse of internal buffers, and doesn't have to constantly allocate new buffers Required for legacy NLog-targets, that expects buffers to remain stable after Write-method exit</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
       </xs:extension>
@@ -2121,22 +2121,22 @@
         </xs:choice>
         <xs:attribute name="name" type="xs:string">
           <xs:annotation>
-            <xs:documentation>Name of the target.</xs:documentation>
+            <xs:documentVersionation>Name of the target.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="layout" type="SimpleLayoutAttribute">
           <xs:annotation>
-            <xs:documentation>Layout used to format log messages.</xs:documentation>
+            <xs:documentVersionation>Layout used to format log messages.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="formatMessage" type="xs:boolean">
           <xs:annotation>
-            <xs:documentation>Indicates whether to perform layout calculation.</xs:documentation>
+            <xs:documentVersionation>Indicates whether to perform layout calculation.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="optimizeBufferReuse" type="xs:boolean">
           <xs:annotation>
-            <xs:documentation>Target supports reuse of internal buffers, and doesn't have to constantly allocate new buffers Required for legacy NLog-targets, that expects buffers to remain stable after Write-method exit</xs:documentation>
+            <xs:documentVersionation>Target supports reuse of internal buffers, and doesn't have to constantly allocate new buffers Required for legacy NLog-targets, that expects buffers to remain stable after Write-method exit</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
       </xs:extension>
@@ -2152,17 +2152,17 @@
         </xs:choice>
         <xs:attribute name="name" type="xs:string">
           <xs:annotation>
-            <xs:documentation>Name of the target.</xs:documentation>
+            <xs:documentVersionation>Name of the target.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="layout" type="SimpleLayoutAttribute">
           <xs:annotation>
-            <xs:documentation>Layout used to format log messages.</xs:documentation>
+            <xs:documentVersionation>Layout used to format log messages.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="optimizeBufferReuse" type="xs:boolean">
           <xs:annotation>
-            <xs:documentation>Target supports reuse of internal buffers, and doesn't have to constantly allocate new buffers Required for legacy NLog-targets, that expects buffers to remain stable after Write-method exit</xs:documentation>
+            <xs:documentVersionation>Target supports reuse of internal buffers, and doesn't have to constantly allocate new buffers Required for legacy NLog-targets, that expects buffers to remain stable after Write-method exit</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
       </xs:extension>
@@ -2184,47 +2184,47 @@
         </xs:choice>
         <xs:attribute name="name" type="xs:string">
           <xs:annotation>
-            <xs:documentation>Name of the target.</xs:documentation>
+            <xs:documentVersionation>Name of the target.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="autoCreate" type="xs:boolean">
           <xs:annotation>
-            <xs:documentation>Indicates whether performance counter should be automatically created.</xs:documentation>
+            <xs:documentVersionation>Indicates whether performance counter should be automatically created.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="categoryName" type="xs:string">
           <xs:annotation>
-            <xs:documentation>Name of the performance counter category.</xs:documentation>
+            <xs:documentVersionation>Name of the performance counter category.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="counterHelp" type="xs:string">
           <xs:annotation>
-            <xs:documentation>Counter help text.</xs:documentation>
+            <xs:documentVersionation>Counter help text.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="counterName" type="xs:string">
           <xs:annotation>
-            <xs:documentation>Name of the performance counter.</xs:documentation>
+            <xs:documentVersionation>Name of the performance counter.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="counterType" type="System.Diagnostics.PerformanceCounterType">
           <xs:annotation>
-            <xs:documentation>Performance counter type.</xs:documentation>
+            <xs:documentVersionation>Performance counter type.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="incrementValue" type="SimpleLayoutAttribute">
           <xs:annotation>
-            <xs:documentation>The value by which to increment the counter.</xs:documentation>
+            <xs:documentVersionation>The value by which to increment the counter.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="instanceName" type="xs:string">
           <xs:annotation>
-            <xs:documentation>Performance counter instance name.</xs:documentation>
+            <xs:documentVersionation>Performance counter instance name.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="optimizeBufferReuse" type="xs:boolean">
           <xs:annotation>
-            <xs:documentation>Target supports reuse of internal buffers, and doesn't have to constantly allocate new buffers Required for legacy NLog-targets, that expects buffers to remain stable after Write-method exit</xs:documentation>
+            <xs:documentVersionation>Target supports reuse of internal buffers, and doesn't have to constantly allocate new buffers Required for legacy NLog-targets, that expects buffers to remain stable after Write-method exit</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
       </xs:extension>
@@ -2273,17 +2273,17 @@
         </xs:choice>
         <xs:attribute name="name" type="xs:string">
           <xs:annotation>
-            <xs:documentation>Name of the target.</xs:documentation>
+            <xs:documentVersionation>Name of the target.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="defaultFilter" type="Condition">
           <xs:annotation>
-            <xs:documentation>Default filter to be applied when no specific rule matches.</xs:documentation>
+            <xs:documentVersionation>Default filter to be applied when no specific rule matches.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="optimizeBufferReuse" type="xs:boolean">
           <xs:annotation>
-            <xs:documentation>Target supports reuse of internal buffers, and doesn't have to constantly allocate new buffers Required for legacy NLog-targets, that expects buffers to remain stable after Write-method exit</xs:documentation>
+            <xs:documentVersionation>Target supports reuse of internal buffers, and doesn't have to constantly allocate new buffers Required for legacy NLog-targets, that expects buffers to remain stable after Write-method exit</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
       </xs:extension>
@@ -2296,12 +2296,12 @@
     </xs:choice>
     <xs:attribute name="exists" type="Condition">
       <xs:annotation>
-        <xs:documentation>Condition to be tested.</xs:documentation>
+        <xs:documentVersionation>Condition to be tested.</xs:documentVersionation>
       </xs:annotation>
     </xs:attribute>
     <xs:attribute name="filter" type="Condition">
       <xs:annotation>
-        <xs:documentation>Resulting filter to be applied when the condition matches.</xs:documentation>
+        <xs:documentVersionation>Resulting filter to be applied when the condition matches.</xs:documentVersionation>
       </xs:annotation>
     </xs:attribute>
   </xs:complexType>
@@ -2314,12 +2314,12 @@
         </xs:choice>
         <xs:attribute name="name" type="xs:string">
           <xs:annotation>
-            <xs:documentation>Name of the target.</xs:documentation>
+            <xs:documentVersionation>Name of the target.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="optimizeBufferReuse" type="xs:boolean">
           <xs:annotation>
-            <xs:documentation>Target supports reuse of internal buffers, and doesn't have to constantly allocate new buffers Required for legacy NLog-targets, that expects buffers to remain stable after Write-method exit</xs:documentation>
+            <xs:documentVersionation>Target supports reuse of internal buffers, and doesn't have to constantly allocate new buffers Required for legacy NLog-targets, that expects buffers to remain stable after Write-method exit</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
       </xs:extension>
@@ -2335,17 +2335,17 @@
         </xs:choice>
         <xs:attribute name="name" type="xs:string">
           <xs:annotation>
-            <xs:documentation>Name of the target.</xs:documentation>
+            <xs:documentVersionation>Name of the target.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="optimizeBufferReuse" type="xs:boolean">
           <xs:annotation>
-            <xs:documentation>Target supports reuse of internal buffers, and doesn't have to constantly allocate new buffers Required for legacy NLog-targets, that expects buffers to remain stable after Write-method exit</xs:documentation>
+            <xs:documentVersionation>Target supports reuse of internal buffers, and doesn't have to constantly allocate new buffers Required for legacy NLog-targets, that expects buffers to remain stable after Write-method exit</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="repeatCount" type="xs:integer">
           <xs:annotation>
-            <xs:documentation>Number of times to repeat each log message.</xs:documentation>
+            <xs:documentVersionation>Number of times to repeat each log message.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
       </xs:extension>
@@ -2362,22 +2362,22 @@
         </xs:choice>
         <xs:attribute name="name" type="xs:string">
           <xs:annotation>
-            <xs:documentation>Name of the target.</xs:documentation>
+            <xs:documentVersionation>Name of the target.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="optimizeBufferReuse" type="xs:boolean">
           <xs:annotation>
-            <xs:documentation>Target supports reuse of internal buffers, and doesn't have to constantly allocate new buffers Required for legacy NLog-targets, that expects buffers to remain stable after Write-method exit</xs:documentation>
+            <xs:documentVersionation>Target supports reuse of internal buffers, and doesn't have to constantly allocate new buffers Required for legacy NLog-targets, that expects buffers to remain stable after Write-method exit</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="retryCount" type="xs:integer">
           <xs:annotation>
-            <xs:documentation>Number of retries that should be attempted on the wrapped target in case of a failure.</xs:documentation>
+            <xs:documentVersionation>Number of retries that should be attempted on the wrapped target in case of a failure.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="retryDelayMilliseconds" type="xs:integer">
           <xs:annotation>
-            <xs:documentation>Time to wait between retries in milliseconds.</xs:documentation>
+            <xs:documentVersionation>Time to wait between retries in milliseconds.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
       </xs:extension>
@@ -2392,12 +2392,12 @@
         </xs:choice>
         <xs:attribute name="name" type="xs:string">
           <xs:annotation>
-            <xs:documentation>Name of the target.</xs:documentation>
+            <xs:documentVersionation>Name of the target.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="optimizeBufferReuse" type="xs:boolean">
           <xs:annotation>
-            <xs:documentation>Target supports reuse of internal buffers, and doesn't have to constantly allocate new buffers Required for legacy NLog-targets, that expects buffers to remain stable after Write-method exit</xs:documentation>
+            <xs:documentVersionation>Target supports reuse of internal buffers, and doesn't have to constantly allocate new buffers Required for legacy NLog-targets, that expects buffers to remain stable after Write-method exit</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
       </xs:extension>
@@ -2412,12 +2412,12 @@
         </xs:choice>
         <xs:attribute name="name" type="xs:string">
           <xs:annotation>
-            <xs:documentation>Name of the target.</xs:documentation>
+            <xs:documentVersionation>Name of the target.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="optimizeBufferReuse" type="xs:boolean">
           <xs:annotation>
-            <xs:documentation>Target supports reuse of internal buffers, and doesn't have to constantly allocate new buffers Required for legacy NLog-targets, that expects buffers to remain stable after Write-method exit</xs:documentation>
+            <xs:documentVersionation>Target supports reuse of internal buffers, and doesn't have to constantly allocate new buffers Required for legacy NLog-targets, that expects buffers to remain stable after Write-method exit</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
       </xs:extension>
@@ -2433,17 +2433,17 @@
         </xs:choice>
         <xs:attribute name="name" type="xs:string">
           <xs:annotation>
-            <xs:documentation>Name of the target.</xs:documentation>
+            <xs:documentVersionation>Name of the target.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="layout" type="SimpleLayoutAttribute">
           <xs:annotation>
-            <xs:documentation>Layout used to format log messages.</xs:documentation>
+            <xs:documentVersionation>Layout used to format log messages.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="optimizeBufferReuse" type="xs:boolean">
           <xs:annotation>
-            <xs:documentation>Target supports reuse of internal buffers, and doesn't have to constantly allocate new buffers Required for legacy NLog-targets, that expects buffers to remain stable after Write-method exit</xs:documentation>
+            <xs:documentVersionation>Target supports reuse of internal buffers, and doesn't have to constantly allocate new buffers Required for legacy NLog-targets, that expects buffers to remain stable after Write-method exit</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
       </xs:extension>
@@ -2469,62 +2469,62 @@
         </xs:choice>
         <xs:attribute name="name" type="xs:string">
           <xs:annotation>
-            <xs:documentation>Name of the target.</xs:documentation>
+            <xs:documentVersionation>Name of the target.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="includeBOM" type="xs:boolean">
           <xs:annotation>
-            <xs:documentation>Should we include the BOM (Byte-order-mark) for UTF? Influences the  property. This will only work for UTF-8.</xs:documentation>
+            <xs:documentVersionation>Should we include the BOM (Byte-order-mark) for UTF? Influences the  property. This will only work for UTF-8.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="optimizeBufferReuse" type="xs:boolean">
           <xs:annotation>
-            <xs:documentation>Target supports reuse of internal buffers, and doesn't have to constantly allocate new buffers Required for legacy NLog-targets, that expects buffers to remain stable after Write-method exit</xs:documentation>
+            <xs:documentVersionation>Target supports reuse of internal buffers, and doesn't have to constantly allocate new buffers Required for legacy NLog-targets, that expects buffers to remain stable after Write-method exit</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="encoding" type="xs:string">
           <xs:annotation>
-            <xs:documentation>Encoding.</xs:documentation>
+            <xs:documentVersionation>Encoding.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="escapeDataNLogLegacy" type="xs:boolean">
           <xs:annotation>
-            <xs:documentation>Value whether escaping be done according to the old NLog style (Very non-standard)</xs:documentation>
+            <xs:documentVersionation>Value whether escaping be done according to the old NLog style (Very non-standard)</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="escapeDataRfc3986" type="xs:boolean">
           <xs:annotation>
-            <xs:documentation>Value whether escaping be done according to Rfc3986 (Supports Internationalized Resource Identifiers - IRIs)</xs:documentation>
+            <xs:documentVersionation>Value whether escaping be done according to Rfc3986 (Supports Internationalized Resource Identifiers - IRIs)</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="methodName" type="xs:string">
           <xs:annotation>
-            <xs:documentation>Web service method name. Only used with Soap.</xs:documentation>
+            <xs:documentVersionation>Web service method name. Only used with Soap.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="namespace" type="xs:string">
           <xs:annotation>
-            <xs:documentation>Web service namespace. Only used with Soap.</xs:documentation>
+            <xs:documentVersionation>Web service namespace. Only used with Soap.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="protocol" type="NLog.Targets.WebServiceProtocol">
           <xs:annotation>
-            <xs:documentation>Protocol to be used when calling web service.</xs:documentation>
+            <xs:documentVersionation>Protocol to be used when calling web service.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="url" type="xs:anyURI">
           <xs:annotation>
-            <xs:documentation>Web service URL.</xs:documentation>
+            <xs:documentVersionation>Web service URL.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="xmlRoot" type="xs:string">
           <xs:annotation>
-            <xs:documentation>Name of the root XML element, if POST of XML document chosen. If so, this property must not be null. (see  and ).</xs:documentation>
+            <xs:documentVersionation>Name of the root XML element, if POST of XML documentVersion chosen. If so, this property must not be null. (see  and ).</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="xmlRootNamespace" type="xs:string">
           <xs:annotation>
-            <xs:documentation>(optional) root namespace of the XML document, if POST of XML document chosen. (see  and ).</xs:documentation>
+            <xs:documentVersionation>(optional) root namespace of the XML documentVersion, if POST of XML documentVersion chosen. (see  and ).</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
       </xs:extension>
@@ -2568,42 +2568,42 @@
         </xs:choice>
         <xs:attribute name="footer" type="SimpleLayoutAttribute">
           <xs:annotation>
-            <xs:documentation>Footer layout.</xs:documentation>
+            <xs:documentVersionation>Footer layout.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="header" type="SimpleLayoutAttribute">
           <xs:annotation>
-            <xs:documentation>Header layout.</xs:documentation>
+            <xs:documentVersionation>Header layout.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="layout" type="SimpleLayoutAttribute">
           <xs:annotation>
-            <xs:documentation>Body layout (can be repeated multiple times).</xs:documentation>
+            <xs:documentVersionation>Body layout (can be repeated multiple times).</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="customColumnDelimiter" type="xs:string">
           <xs:annotation>
-            <xs:documentation>Custom column delimiter value (valid when ColumnDelimiter is set to 'Custom').</xs:documentation>
+            <xs:documentVersionation>Custom column delimiter value (valid when ColumnDelimiter is set to 'Custom').</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="delimiter" type="NLog.Layouts.CsvColumnDelimiterMode">
           <xs:annotation>
-            <xs:documentation>Column delimiter.</xs:documentation>
+            <xs:documentVersionation>Column delimiter.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="quoteChar" type="xs:string">
           <xs:annotation>
-            <xs:documentation>Quote Character.</xs:documentation>
+            <xs:documentVersionation>Quote Character.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="quoting" type="NLog.Layouts.CsvQuotingMode">
           <xs:annotation>
-            <xs:documentation>Quoting mode.</xs:documentation>
+            <xs:documentVersionation>Quoting mode.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="withHeader" type="xs:boolean">
           <xs:annotation>
-            <xs:documentation>Indicates whether CVS should include header.</xs:documentation>
+            <xs:documentVersionation>Indicates whether CVS should include header.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
       </xs:extension>
@@ -2634,12 +2634,12 @@
     </xs:choice>
     <xs:attribute name="layout" type="SimpleLayoutAttribute">
       <xs:annotation>
-        <xs:documentation>Layout of the column.</xs:documentation>
+        <xs:documentVersionation>Layout of the column.</xs:documentVersionation>
       </xs:annotation>
     </xs:attribute>
     <xs:attribute name="name" type="xs:string">
       <xs:annotation>
-        <xs:documentation>Name of the column.</xs:documentation>
+        <xs:documentVersionation>Name of the column.</xs:documentVersionation>
       </xs:annotation>
     </xs:attribute>
   </xs:complexType>
@@ -2655,22 +2655,22 @@
         </xs:choice>
         <xs:attribute name="excludeProperties" type="xs:string">
           <xs:annotation>
-            <xs:documentation>List of property names to exclude when  is true</xs:documentation>
+            <xs:documentVersionation>List of property names to exclude when  is true</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="includeAllProperties" type="xs:boolean">
           <xs:annotation>
-            <xs:documentation>Option to include all properties from the log events</xs:documentation>
+            <xs:documentVersionation>Option to include all properties from the log events</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="renderEmptyObject" type="xs:boolean">
           <xs:annotation>
-            <xs:documentation>Option to render the empty object value {}</xs:documentation>
+            <xs:documentVersionation>Option to render the empty object value {}</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="suppressSpaces" type="xs:boolean">
           <xs:annotation>
-            <xs:documentation>Option to suppress the extra spaces in the output json</xs:documentation>
+            <xs:documentVersionation>Option to suppress the extra spaces in the output json</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
       </xs:extension>
@@ -2684,17 +2684,17 @@
     </xs:choice>
     <xs:attribute name="encode" type="xs:boolean">
       <xs:annotation>
-        <xs:documentation>Determines wether or not this attribute will be Json encoded.</xs:documentation>
+        <xs:documentVersionation>Determines wether or not this attribute will be Json encoded.</xs:documentVersionation>
       </xs:annotation>
     </xs:attribute>
     <xs:attribute name="layout" type="SimpleLayoutAttribute">
       <xs:annotation>
-        <xs:documentation>Layout that will be rendered as the attribute's value.</xs:documentation>
+        <xs:documentVersionation>Layout that will be rendered as the attribute's value.</xs:documentVersionation>
       </xs:annotation>
     </xs:attribute>
     <xs:attribute name="name" type="xs:string">
       <xs:annotation>
-        <xs:documentation>Name of the attribute.</xs:documentation>
+        <xs:documentVersionation>Name of the attribute.</xs:documentVersionation>
       </xs:annotation>
     </xs:attribute>
   </xs:complexType>
@@ -2708,17 +2708,17 @@
         </xs:choice>
         <xs:attribute name="footer" type="SimpleLayoutAttribute">
           <xs:annotation>
-            <xs:documentation>Footer layout.</xs:documentation>
+            <xs:documentVersionation>Footer layout.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="header" type="SimpleLayoutAttribute">
           <xs:annotation>
-            <xs:documentation>Header layout.</xs:documentation>
+            <xs:documentVersionation>Header layout.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="layout" type="SimpleLayoutAttribute">
           <xs:annotation>
-            <xs:documentation>Body layout (can be repeated multiple times).</xs:documentation>
+            <xs:documentVersionation>Body layout (can be repeated multiple times).</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
       </xs:extension>
@@ -2739,7 +2739,7 @@
         </xs:choice>
         <xs:attribute name="text" type="xs:string">
           <xs:annotation>
-            <xs:documentation>Layout text.</xs:documentation>
+            <xs:documentVersionation>Layout text.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
       </xs:extension>
@@ -2754,12 +2754,12 @@
         </xs:choice>
         <xs:attribute name="action" type="FilterResult">
           <xs:annotation>
-            <xs:documentation>Action to be taken when filter matches.</xs:documentation>
+            <xs:documentVersionation>Action to be taken when filter matches.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="condition" type="Condition">
           <xs:annotation>
-            <xs:documentation>Condition expression.</xs:documentation>
+            <xs:documentVersionation>Condition expression.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
       </xs:extension>
@@ -2785,22 +2785,22 @@
         </xs:choice>
         <xs:attribute name="action" type="FilterResult">
           <xs:annotation>
-            <xs:documentation>Action to be taken when filter matches.</xs:documentation>
+            <xs:documentVersionation>Action to be taken when filter matches.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="ignoreCase" type="xs:boolean">
           <xs:annotation>
-            <xs:documentation>Indicates whether to ignore case when comparing strings.</xs:documentation>
+            <xs:documentVersionation>Indicates whether to ignore case when comparing strings.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="layout" type="SimpleLayoutAttribute">
           <xs:annotation>
-            <xs:documentation>Layout to be used to filter log messages.</xs:documentation>
+            <xs:documentVersionation>Layout to be used to filter log messages.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="substring" type="xs:string">
           <xs:annotation>
-            <xs:documentation>Substring to be matched.</xs:documentation>
+            <xs:documentVersionation>Substring to be matched.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
       </xs:extension>
@@ -2817,22 +2817,22 @@
         </xs:choice>
         <xs:attribute name="action" type="FilterResult">
           <xs:annotation>
-            <xs:documentation>Action to be taken when filter matches.</xs:documentation>
+            <xs:documentVersionation>Action to be taken when filter matches.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="compareTo" type="xs:string">
           <xs:annotation>
-            <xs:documentation>String to compare the layout to.</xs:documentation>
+            <xs:documentVersionation>String to compare the layout to.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="ignoreCase" type="xs:boolean">
           <xs:annotation>
-            <xs:documentation>Indicates whether to ignore case when comparing strings.</xs:documentation>
+            <xs:documentVersionation>Indicates whether to ignore case when comparing strings.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="layout" type="SimpleLayoutAttribute">
           <xs:annotation>
-            <xs:documentation>Layout to be used to filter log messages.</xs:documentation>
+            <xs:documentVersionation>Layout to be used to filter log messages.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
       </xs:extension>
@@ -2849,22 +2849,22 @@
         </xs:choice>
         <xs:attribute name="action" type="FilterResult">
           <xs:annotation>
-            <xs:documentation>Action to be taken when filter matches.</xs:documentation>
+            <xs:documentVersionation>Action to be taken when filter matches.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="ignoreCase" type="xs:boolean">
           <xs:annotation>
-            <xs:documentation>Indicates whether to ignore case when comparing strings.</xs:documentation>
+            <xs:documentVersionation>Indicates whether to ignore case when comparing strings.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="layout" type="SimpleLayoutAttribute">
           <xs:annotation>
-            <xs:documentation>Layout to be used to filter log messages.</xs:documentation>
+            <xs:documentVersionation>Layout to be used to filter log messages.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="substring" type="xs:string">
           <xs:annotation>
-            <xs:documentation>Substring to be matched.</xs:documentation>
+            <xs:documentVersionation>Substring to be matched.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
       </xs:extension>
@@ -2881,22 +2881,22 @@
         </xs:choice>
         <xs:attribute name="action" type="FilterResult">
           <xs:annotation>
-            <xs:documentation>Action to be taken when filter matches.</xs:documentation>
+            <xs:documentVersionation>Action to be taken when filter matches.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="compareTo" type="xs:string">
           <xs:annotation>
-            <xs:documentation>String to compare the layout to.</xs:documentation>
+            <xs:documentVersionation>String to compare the layout to.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="ignoreCase" type="xs:boolean">
           <xs:annotation>
-            <xs:documentation>Indicates whether to ignore case when comparing strings.</xs:documentation>
+            <xs:documentVersionation>Indicates whether to ignore case when comparing strings.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="layout" type="SimpleLayoutAttribute">
           <xs:annotation>
-            <xs:documentation>Layout to be used to filter log messages.</xs:documentation>
+            <xs:documentVersionation>Layout to be used to filter log messages.</xs:documentVersionation>
           </xs:annotation>
         </xs:attribute>
       </xs:extension>
