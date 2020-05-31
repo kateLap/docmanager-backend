@@ -10,7 +10,7 @@ namespace DocManager.Business.Contract.Documents.Services
 
         void DeleteDocumentVersion(DocumentVersion documentVersion);
 
-        DocumentVersion GetDocumentVersion(int versionId);
+        Task<DocumentVersion> GetDocumentVersion(int versionId);
 
         List<DocumentVersion> GetAll(int documentId);
     }

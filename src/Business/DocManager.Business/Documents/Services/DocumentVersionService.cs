@@ -76,18 +76,18 @@ namespace DocManager.Business.Documents.Services
             _documentVersionRepository.Delete(Mapper.Map<DocumentVersionEntity>(documentVersion));
         }
 
-        public DocumentVersion GetDocumentVersion(int versionId)
+        public async Task<DocumentVersion> GetDocumentVersion(int versionId)
         {
-            var entity = _documentVersionRepository.GetByIdAsync(versionId);
+            var entity = await _documentVersionRepository.GetByIdAsync(versionId);
 
-            return Mapper.Map<DocumentVersion>(entity);
+            return Mapper.Map<DocumentVersionEntity, DocumentVersion>(entity);
         }
 
         public List<DocumentVersion> GetAll(int documentId)
         {
             var documentVersions = _documentVersionRepository.GetAll()
-                .Where(e => e.Document.Id == documentId)
-                .Select(e => Mapper.Map<DocumentVersion>(e));
+                .Where(e => e.Document.Id == documentId).ToList()
+                .Select(Mapper.Map<DocumentVersion>);
 
             return documentVersions.ToList();
         }

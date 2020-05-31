@@ -19,8 +19,8 @@ using Ninject;
 
 namespace DocManager.Web.Controllers
 {
-    [Authorize]
-    [RoutePrefix("api/Versions")]
+    //[Authorize]
+    //[RoutePrefix("api/Versions")]
     public class DocumentVersionsController : ApiController
     {
         private string[] _supportedMediaTypes =
@@ -95,9 +95,9 @@ namespace DocManager.Web.Controllers
 
         [HttpGet]
         [Route("documents/{documentId:int}/versions/{versionId:int}")]
-        public HttpResponseMessage DownloadDocumentVersion(int documentId, int versionId)
+        public async Task<HttpResponseMessage> DownloadDocumentVersion(int documentId, int versionId)
         {
-            var version = DocumentVersionService.GetDocumentVersion(versionId);
+            var version = await DocumentVersionService.GetDocumentVersion(versionId);
 
             byte[] fileBytes = version.FileBlob.Content;//"C:\\1.doc"
 
